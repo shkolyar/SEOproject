@@ -1,0 +1,61 @@
+///fonts///
+
+$font-family: "Open Sans", Arial, sans-serif;
+$light: 300;
+$normal: 400;
+$bold: 700;
+$font-size-small: 12px;
+$font-size: 14px;
+$font-size-bigger: 16px;
+$font-size-big: 18px;
+$font-size-medium: 20px;
+$font-size-title: 24px;
+$font-size-biggest: 30px;
+$font-size-super-big: 40px;
+$font-size-giant: 50px;
+
+///colors///
+
+$main-color: #d22856;
+
+$bg-main: #fff;
+$bg-second: #f2f2f2;
+
+$font-color-main: #283645;
+$font-color-second: #fff;
+$font-color-third: #000;
+
+$header-color: #1d2631;
+$header-menu-color: #283645;
+
+$border-light: #485461;
+$border-dark: #000;
+
+
+$grey-dark: #7e868f;
+$grey-darker: #8d949b;
+$grey: #dddfe0;
+$grey-light: #bec2c7;
+$grey-lighter: #e5e5e5;
+$grey-lightest: #e9ebec;
+$grey-shadow-dark: #dfdfdf;
+$grey-shadow-light: #fbfbfb;
+
+$panorama-color: #232c1e;
+
+$form-btn: #2aab6d;
+$form-btn-hover: #1c9b5e;
+$form-btn-focus: #61b98f;
+$focus-pink-btn: #e06989;
+$focus-transparent-btn: #f1becc;
+$hover-btn-grey: #b5b9be;
+$focus-btn-grey: #cbced2;
+
+///screen///
+
+$screen-sm: 320px;
+$screen-md: 660px;
+$screen-lg: 960px;
+
+
+$retina: (min-resolution: 144dpi), (min-resolution: 1.5dppx);
