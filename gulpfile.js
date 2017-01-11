@@ -130,11 +130,21 @@ gulp.task('js', function () {
     .pipe(gulp.dest(dirs.build + '/js'));
 });
 
+// ЗАДАЧА: Перемещение шрифтов
+gulp.task('copy', function() {
+  return gulp.src([
+      dirs.source + '/fonts/**/*.{woff,woff2}'
+    ], {
+      base: '.'
+    })
+    .pipe(gulp.dest('build'));
+});
+
 // ЗАДАЧА: Сборка всего
 gulp.task('build', gulp.series(                             // последовательно:
   'clean',                                                  // последовательно: очистку папки сборки
   'svgstore',
-  gulp.parallel('sass', 'img', 'js'),
+  gulp.parallel('sass', 'img', 'js', 'copy'),
   'html'                                                    // последовательно: сборку разметки
 ));
 
@@ -144,7 +154,7 @@ gulp.task('serve', gulp.series('build', function() {
   browserSync.init({                                        // запускаем локальный сервер (показ, автообновление, синхронизацию)
     //server: dirs.build,                                     // папка, которая будет «корнем» сервера (путь из константы)
     server: {
-      baseDir: "./build/"
+      baseDir: './build/'
     },
     port: 3000,                                             // порт, на котором будет работать сервер
     startPath: 'index.html',                                // файл, который буде открываться в браузере при старте сервера
@@ -209,7 +219,7 @@ function fileExist(path) {
 
 var onError = function(err) {
   notify.onError({
-    title: "Error in " + err.plugin,
+    title: 'Error in ' + err.plugin,
   })(err);
   this.emit('end');
 };
