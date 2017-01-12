@@ -1,0 +1,52 @@
+.btn {
+  display: inline-block;
+  vertical-align: middle;
+  text-decoration: none;
+  text-align: center;
+  color: $font-second-color;
+  font-size: $font-size-big;
+  font-weight: $bold;
+  padding-top: 13px;
+  padding-bottom: 14px;
+  padding-left: 34px;
+  padding-right: 34px;
+  border-radius: 40px;
+  cursor: pointer;
+  background-color: $second-color;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  width: 100%;
+  white-space: pre-wrap;
+  outline: none;
+}
+
+.btn--large-pink {
+  margin-top: 10px;
+  width: 100%;
+  text-transform: uppercase;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  background-color: $second-color;
+  line-height: 1.667em;
+  border: 1px solid $second-color;
+  padding-left: 34px;
+  padding-right: 34px;
+  color: $font-second-color;
+  font-size: $font-size;
+}
+
+.btn--large-form {
+  margin-top: 0;
+  width: 100%;
+  text-transform: uppercase;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: $main-color;
+  line-height: 1.667em;
+  border: 1px solid $main-color;
+  padding-left: 34px;
+  padding-right: 34px;
+  color: $font-second-color;
+  font-size: $font-size-bigger;
+  font-weight: $bold;
+}

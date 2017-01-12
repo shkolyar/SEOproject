@@ -1,0 +1,33 @@
+.features__inner {
+  @include container;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.features__title {
+  font-size: $font-size-title;
+  font-weight: $light;
+  line-height: 1.2em;
+  margin-top: 0;
+}
+
+.features__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  padding-top: 20px;
+}
+
+.features__item {
+  margin-bottom: 35px;
+}
+
+.features__item-title {
+  font-size: $font-size-big;
+  font-weight: $bold;
+  line-height: 1.333em;
+}
+
+.fetures__item-text {
+  line-height: 1.714em;
+}

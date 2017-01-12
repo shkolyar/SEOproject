@@ -1,0 +1,36 @@
+.field-select {
+  display: block;
+  margin-top: 20px;
+}
+
+.field-select__select {
+  display: inline-block;
+  vertical-align: middle;
+  width: 100%;
+  // padding: .313em 1.8em .313em .438em;
+  font-size: $font-size-big;
+  font-family: inherit;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: $bg-main;
+  background-image: url("../img/down-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: right .7em center;
+  width: 100%;
+  line-height: 1.667em;
+  border: 2px solid $grey;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  padding-left: 19px;
+}
+
+.field-select__name {
+  display: block;
+  text-transform: uppercase;
+  color: $second-color;
+  margin-left: 15px;
+  font-size: $font-size;
+  font-weight: $normal;
+  margin-bottom: 10px;
+}
