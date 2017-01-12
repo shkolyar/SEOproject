@@ -1,0 +1,30 @@
+.field-text {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.field-text__input {
+  width: 100%;
+  font-size: $font-size-big;
+  line-height: 1.667em;
+  border: 2px solid $grey;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  padding-left: 19px;
+}
+
+.field-text__input-wrap {
+  margin-top: 10px;
+}
+
+.field-text__name {
+  display: block;
+  text-transform: uppercase;
+  color: $second-color;
+  margin-left: 15px;
+}
+
+.field-text--keyword .field-text__name {
+  display: none;
+}
+
