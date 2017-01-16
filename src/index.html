@@ -16,9 +16,9 @@
           <a href="" class="main-logo">
             <img src="" class="main-logo__picture" width="213" height="58" alt="SeoFocus">
           </a>
-          <span id="main-menu-toggler" class="page-header__menu-toggler  page-header__menu-toggler--close  page-header__menu-toggler--open"><span></span></span>
+          <!-- <span id="main-menu-toggler" class="page-header__menu-toggler  page-header__menu-toggler--close  page-header__menu-toggler--open"><span></span></span> -->
         </div>
-        <nav class="main-nav">
+        <!-- <nav class="main-nav">
           <div class="main-nav__dropdown">
             <div class="main-nav__dropdown-inner">
               <ul class="main-nav__list  main-nav__list--user">
@@ -45,12 +45,11 @@
               </ul>
             </div>
           </div>
-        </nav>
+        </nav> -->
       </div>
       <div class="promo">
         <div class="promo__inner">
           <div class="promo__img">
-            <img src="" alt="">
           </div>
           <div class="promo__content">
             <div class="promo__content-inner">
@@ -89,258 +88,132 @@
       </div>
     </section>
 
-    <form action="" class="form">
+    <form action="" class="form  form--grey-bg">
       <div class="form__inner">
-        <p class="form__promo-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius neque magnam esse, quam eos dolorem quaerat dolor, aspernatur expedita culpa, sunt voluptate, ullam.</p>
-        <div class="form__step  form__step--white-bg">
-          <div class="form__step-inner">
-            <div class="field-text">
-              <label class="field-text__name" for="text-field-1">Lorem ipsum dolor.</label>
-              <div class="field-text__input-wrap">
-                <input class="field-text__input" id="text-field-1" type="text" placeholder="Введите адрес сайта">
+        <div class="form__container  form__container--flex">
+          <div class="form__step  form__step--promo  form__step--order-0">
+            <div class="form__step-inner">
+              <h2 class="form__title  visually-hidden  visually-hidden--sm">Lorem ipsum dolor sit.</h2>
+              <p class="form__promo-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius neque magnam esse, quam eos dolorem quaerat dolor, aspernatur expedita culpa, sunt voluptate, ullam.</p>
+            </div>
+          </div>
+
+          <div class="form__step  form__step--white-bg  form__step--order-1">
+            <div class="form__step-inner">
+              <h3 class="form__step-title">Адрес сайта</h3>
+              <div class="field-text">
+                <label class="field-text__name  visually-hidden" for="text-field-1">Lorem ipsum dolor.</label>
+                <div class="field-text__input-wrap">
+                  <input class="field-text__input" id="text-field-1" type="text" placeholder="Введите адрес сайта">
+                </div>
               </div>
             </div>
-            <b class="form__step-title">Введите необходимое количество ключевых слов</b>
-            <div class="field-text  field-text--keyword">
-              <label class="field-text__name" for="text-field-1">Ключевое слово</label>
-              <div class="field-text__input-wrap">
-                <input class="field-text__input" id="text-field-1" type="text" placeholder="Ключевое слово">
+          </div>
+
+          <div class="form__step  form__step--enter-key  form__step--order-3">
+            <div class="form__step-inner  form__step-inner--choise-enter-key">
+              <h3 class="form__step-title">Как будем вводить ключи?</h3>
+              <ul class="form__enter-keywords-list">
+                <li class="field-radio">
+                  <label class="field-radio__name">
+                    <input type="radio" name="enter-key-type" value="hand-enter-key" class="field-radio__input" id="enter-type-1" checked>
+                    <span class="field-radio__name-text  field-radio__name-text--hand">Введу слова вручную</span>
+                  </label>
+                </li>
+                <li class="field-radio">
+                  <label class="field-radio__name">
+                    <input type="radio" name="enter-key-type" value="copypaste-enter-key" class="field-radio__input" id="enter-type-2">
+                    <span class="field-radio__name-text">Скопирую список из документа</span>
+                  </label>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="form__step-wrapper  form__step-wrapper--order-4">
+
+            <div class="form__step  form__step--white-bg  form__step--hand-enter-keys" id="step-enter-1">
+              <div class="form__step-inner">
+                <h3 class="form__step-title">Введите необходимое количество ключевых слов</h3>
+                <div class="field-text  field-text--keyword">
+                  <label class="field-text__name  visually-hidden" for="text-field-1">Ключевое слово</label>
+                  <div class="field-text__input-wrap">
+                    <input class="field-text__input" id="text-field-1" type="text" placeholder="Ключевое слово">
+                  </div>
+                </div>
+                <button type="button" class="btn--large-pink">Еще ключевое слово</button>
               </div>
             </div>
-            <button type="button" class="btn--large-pink">Еще ключевое слово</button>
-          </div>
-        </div>
 
-        <div class="form__step  form__step--seach-system">
-          <div class="form__step-inner  form__step-inner--seach-system">
-            <h2 class="form__step-title">Поисковые системы</h2>
-            <ul class="form__search-list">
-              <li class="field-checkbox">
-                <label class="field-checkbox__name">
-                  <input type="checkbox" class="field-checkbox__input" checked>
-                  <span class="field-checkbox__name-text">Яндекс (картинка?)</span>
-                </label>
-              </li>
-              <li class="field-checkbox">
-                <label class="field-checkbox__name">
-                  <input type="checkbox" class="field-checkbox__input" checked>
-                  <span class="field-checkbox__name-text">Гугл (картинка?)</span>
-                </label>
-              </li>
-            </ul>
-          </div>
-        </div>
+            <div class="form__step  form__step--white-bg  form__step--copypaste-enter-keys  form__step--hide"  id="step-enter-2">
+              <div class="form__step-inner">
+                <h3 class="form__step-title">Введите необходимое количество ключевых слов</h3>
+                <textarea class="field-text__textarea" name="review" cols="30" rows="10" placeholder="Каждое ключевое слово или фразу вводите через запятую или с новой строки*"></textarea>
+                <div class="form__note-wrapper">
+                  <p class="form__note"><span class="form__note-star">*</span> — Обрати внимание на разделители ключевых запросов (запятая или новая строка)</p>
+                </div>
+              </div>
+            </div>
 
-        <div class="form__step  form__step--white-bg">
-          <div class="form__step-inner">
-            <label class="field-select">
-              <div class="field-select__name">
-                Страна
-              </div>
-              <div class="field-select__select-wrap">
-                <select class="field-select__select">
-                  <option value="0" selected="selected">Россия</option>
-                  <option value="1">Украина</option>
-                  <option value="2">Белоруссия</option>
-                </select>
-              </div>
-            </label>
-            <label class="field-select">
-              <div class="field-select__name">
-                Регион поиска
-              </div>
-              <div class="field-select__select-wrap">
-                <select class="field-select__select">
-                  <option value="-1" selected="selected">Все регионы</option>
-                  <option value="225">Вся Россия</option>
-                  <option value="187">Украина</option>
-                  <option value="159">Казахстан</option>
-                  <option value="166">СНГ</option>
-                  <option value="111">Европа</option>
-                  <option value="183">Азия</option>
-                  <option value="1">Россия / Москва и область</option>
-                  <option value="213">Россия / Москва</option>
-                  <option value="10174">Россия / Санкт-Петербург и Ленинградская область</option>
-                  <!-- <option value="2">Россия / Санкт-Петербург</option>
-                  <option value="17">Россия / Северо-Запад</option>
-                  <option value="26">Россия / Юг</option>
-                  <option value="40">Россия / Поволжье</option>
-                  <option value="52">Россия / Урал</option>
-                  <option value="59">Россия / Сибирь</option>
-                  <option value="73">Россия / Дальний Восток</option>
-                  <option value="3">Россия / Центр</option>
-                  <option value="11235">Россия / Алтайский край</option>
-                  <option value="11375">Россия / Амурская область</option>
-                  <option value="20">Россия / Архангельск</option>
-                  <option value="10842">Россия / Архангельская область</option>
-                  <option value="10946">Россия / Астраханская область</option>
-                  <option value="37">Россия / Астрахань</option>
-                  <option value="197">Россия / Барнаул</option>
-                  <option value="4">Россия / Белгород</option>
-                  <option value="10645">Россия / Белгородская область</option>
-                  <option value="975">Россия / Бийск</option>
-                  <option value="77">Россия / Благовещенск</option>
-                  <option value="976">Россия / Братск</option>
-                  <option value="191">Россия / Брянск</option>
-                  <option value="10650">Россия / Брянская область</option>
-                  <option value="24">Россия / Великий Новгород</option>
-                  <option value="75">Россия / Владивосток</option>
-                  <option value="33">Россия / Владикавказ</option>
-                  <option value="192">Россия / Владимир</option>
-                  <option value="10658">Россия / Владимирcкая область</option>
-                  <option value="38">Россия / Волгоград</option>
-                  <option value="10950">Россия / Волгоградская область</option>
-                  <option value="21">Россия / Вологда</option>
-                  <option value="10853">Россия / Вологодская область</option>
-                  <option value="193">Россия / Воронеж</option>
-                  <option value="10672">Россия / Воронежcкая область</option>
-                  <option value="972">Россия / Дзержинск</option>
-                  <option value="10243">Россия / Еврейская автономная область</option>
-                  <option value="54">Россия / Екатеринбург</option>
-                  <option value="21949">Россия / Забайкальский край</option>
-                  <option value="5">Россия / Иваново</option>
-                  <option value="10687">Россия / Ивановская область</option>
-                  <option value="44">Россия / Ижевск</option>
-                  <option value="63">Россия / Иркутск</option>
-                  <option value="11266">Россия / Иркутская область</option>
-                  <option value="41">Россия / Йошкар-Ола</option>
-                  <option value="43">Россия / Казань</option>
-                  <option value="22">Россия / Калининград</option>
-                  <option value="10857">Россия / Калининградская область</option>
-                  <option value="6">Россия / Калуга</option>
-                  <option value="10693">Россия / Калужская область</option>
-                  <option value="11398">Россия / Камчатский край</option>
-                  <option value="64">Россия / Кемерово</option>
-                  <option value="11282">Россия / Кемеровская область</option>
-                  <option value="46">Россия / Киров</option>
-                  <option value="11070">Россия / Кировская область</option>
-                  <option value="7">Россия / Кострома</option>
-                  <option value="10699">Россия / Костромская область</option>
-                  <option value="35">Россия / Краснодар</option>
-                  <option value="10995">Россия / Краснодарский край</option>
-                  <option value="62">Россия / Красноярск</option>
-                  <option value="11309">Россия / Красноярский край</option>
-                  <option value="53">Россия / Курган</option>
-                  <option value="11158">Россия / Курганская область</option>
-                  <option value="8">Россия / Курск</option>
-                  <option value="10705">Россия / Курская область</option>
-                  <option value="9">Россия / Липецк</option>
-                  <option value="10712">Россия / Липецкая область</option>
-                  <option value="79">Россия / Магадан</option>
-                  <option value="11403">Россия / Магаданская область</option>
-                  <option value="235">Россия / Магнитогорск</option>
-                  <option value="28">Россия / Махачкала</option>
-                  <option value="23">Россия / Мурманск</option>
-                  <option value="10897">Россия / Мурманская область</option>
-                  <option value="236">Россия / Набережные Челны</option>
-                  <option value="30">Россия / Нальчик</option>
-                  <option value="974">Россия / Находка</option>
-                  <option value="10176">Россия / Ненецкий АО</option>
-                  <option value="11079">Россия / Нижегородская область</option>
-                  <option value="47">Россия / Нижний Новгород</option>
-                  <option value="10904">Россия / Новгородская область</option>
-                  <option value="237">Россия / Новокузнецк</option>
-                  <option value="970">Россия / Новороссийск</option>
-                  <option value="65">Россия / Новосибирск</option>
-                  <option value="11316">Россия / Новосибирская область</option>
-                  <option value="238">Россия / Новочеркасск</option>
-                  <option value="967">Россия / Обнинск</option>
-                  <option value="66">Россия / Омск</option>
-                  <option value="11318">Россия / Омская область</option>
-                  <option value="10">Россия / Орел</option>
-                  <option value="48">Россия / Оренбург</option>
-                  <option value="11084">Россия / Оренбургская область</option>
-                  <option value="10772">Россия / Орловская область</option>
-                  <option value="49">Россия / Пенза</option>
-                  <option value="11095">Россия / Пензенская область</option>
-                  <option value="11108">Россия / Пермский край</option>
-                  <option value="50">Россия / Пермь</option>
-                  <option value="18">Россия / Петрозаводск</option>
-                  <option value="78">Россия / Петропавловск-Камчатский</option>
-                  <option value="11409">Россия / Приморский край</option>
-                  <option value="25">Россия / Псков</option>
-                  <option value="10926">Россия / Псковская область</option>
-                  <option value="11004">Россия / Республика Адыгея</option>
-                  <option value="10231">Россия / Республика Алтай</option>
-                  <option value="11111">Россия / Республика Башкортостан</option>
-                  <option value="11330">Россия / Республика Бурятия</option>
-                  <option value="11015">Россия / Республика Калмыкия</option>
-                  <option value="10933">Россия / Республика Карелия</option>
-                  <option value="10939">Россия / Республика Коми</option>
-                  <option value="11077">Россия / Республика Марий Эл</option>
-                  <option value="11117">Россия / Республика Мордовия</option>
-                  <option value="11443">Россия / Республика Саха</option>
-                  <option value="10233">Россия / Республика Тыва</option>
-                  <option value="11340">Россия / Республика Хакасия</option>
-                  <option value="39">Россия / Ростов-на-Дону</option>
-                  <option value="11029">Россия / Ростовская область</option>
-                  <option value="10776">Россия / Рязанская область</option>
-                  <option value="11">Россия / Рязань</option>
-                  <option value="51">Россия / Самара</option>
-                  <option value="11131">Россия / Самарская область</option>
-                  <option value="42">Россия / Саранск</option>
-                  <option value="194">Россия / Саратов</option>
-                  <option value="11146">Россия / Саратовская область</option>
-                  <option value="11450">Россия / Сахалинская область</option>
-                  <option value="11162">Россия / Свердловская область</option>
-                  <option value="102444">Россия / Северный Кавказ</option>
-                  <option value="12">Россия / Смоленск</option>
-                  <option value="10795">Россия / Смоленская область</option>
-                  <option value="239">Россия / Сочи</option>
-                  <option value="36">Россия / Ставрополь</option>
-                  <option value="973">Россия / Сургут</option>
-                  <option value="19">Россия / Сыктывкар</option>
-                  <option value="971">Россия / Таганрог</option>
-                  <option value="13">Россия / Тамбов</option>
-                  <option value="10802">Россия / Тамбовская область</option>
-                  <option value="11119">Россия / Татарстан</option>
-                  <option value="10819">Россия / Тверская область</option>
-                  <option value="14">Россия / Тверь</option>
-                  <option value="240">Россия / Тольятти</option>
-                  <option value="67">Россия / Томск</option>
-                  <option value="11353">Россия / Томская область</option>
-                  <option value="15">Россия / Тула</option>
-                  <option value="10832">Россия / Тульская область</option>
-                  <option value="11176">Россия / Тюменская область</option>
-                  <option value="55">Россия / Тюмень</option>
-                  <option value="11148">Россия / Удмуртская республика</option>
-                  <option value="195">Россия / Ульяновск</option>
-                  <option value="11153">Россия / Ульяновская область</option>
-                  <option value="172">Россия / Уфа</option>
-                  <option value="76">Россия / Хабаровск</option>
-                  <option value="11457">Россия / Хабаровский край</option>
-                  <option value="57">Россия / Ханты-Мансийск</option>
-                  <option value="11193">Россия / Ханты-Мансийский АО</option>
-                  <option value="45">Россия / Чебоксары</option>
-                  <option value="56">Россия / Челябинск</option>
-                  <option value="11225">Россия / Челябинская область</option>
-                  <option value="968">Россия / Череповец</option>
-                  <option value="68">Россия / Чита</option>
-                  <option value="11156">Россия / Чувашская республика</option>
-                  <option value="10251">Россия / Чукотский автономный округ</option>
-                  <option value="80">Россия / Южно-Сахалинск</option>
-                  <option value="74">Россия / Якутск</option>
-                  <option value="11232">Россия / Ямало-Ненецкий АО</option>
-                  <option value="16">Россия / Ярославль</option>
-                  <option value="10841">Россия / Ярославская область</option> -->
-                </select>
-              </div>
-            </label>
           </div>
-        </div>
 
-        <div class="form__step">
-          <div class="form__step-inner">
-            <button type="submit" class="btn--large-form">Проверить</button>
+
+          <div class="form__step  form__step--seach-system  form__step--order-2">
+            <div class="form__step-inner  form__step-inner--seach-system">
+              <h3 class="form__step-title">Поисковые системы</h3>
+              <ul class="form__search-list">
+                <li class="field-checkbox">
+                  <label class="field-checkbox__name">
+                    <input type="checkbox" class="field-checkbox__input" checked>
+                    <span class="field-checkbox__name-text">Яндекс (картинка?)</span>
+                  </label>
+                </li>
+                <li class="field-checkbox">
+                  <label class="field-checkbox__name">
+                    <input type="checkbox" class="field-checkbox__input" checked>
+                    <span class="field-checkbox__name-text">Гугл (картинка?)</span>
+                  </label>
+                </li>
+              </ul>
+            </div>
           </div>
-        </div>
 
+          <div class="form__step  form__step--white-bg  form__step--country  form__step--order-5">
+            <div class="form__step-inner">
+              <label class="field-select">
+                <div class="field-select__name">
+                  Страна
+                </div>
+                <div class="field-select__select-wrap">
+                  <select class="field-select__select">
+                    <option value="0" selected="selected">Россия</option>
+                    <option value="1">Украина</option>
+                    <option value="2">Белоруссия</option>
+                  </select>
+                </div>
+              </label>
+              <div class="field-text">
+                <label class="field-text__name" for="text-field-1">Регион поиска</label>
+                <div class="field-text__input-wrap">
+                  <input class="field-text__input" id="text-field-1" type="text" placeholder="Введите регион">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form__step  form__step--button  form__step--order-6">
+            <div class="form__step-inner">
+              <button type="submit" class="btn--large-form">Проверить</button>
+            </div>
+          </div>
+
+        </div>
       </div>
     </form>
   </main>
   <footer class="page-footer">
 
-  </footer><!--
-  <script src="js/script.js" charset="utf-8"></script> -->
+  </footer>
+  <script src="js/script.js" charset="utf-8"></script>
 </body>
 </html>

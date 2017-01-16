@@ -16,10 +16,24 @@
   padding: 0;
   list-style: none;
   padding-top: 20px;
+
+  @media (min-width: $screen-md) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
 }
 
 .features__item {
   margin-bottom: 35px;
+
+  @media (min-width: $screen-md) {
+    flex-basis: 40%;
+  }
+
+  @media (min-width: $screen-lg) {
+    flex-basis: 20%;
+  }
 }
 
 .features__item-title {

@@ -1,20 +1,16 @@
 "use strict";
 
-var mainMenuToggler = document.getElementById("main-menu-toggler");
-var mainMenuWrapper = document.getElementById("main-menu-wrapper");
+var inputEnterHand = document.getElementById("enter-type-1");
+var inputEnterCopypaste = document.getElementById("enter-type-2");
+var blockinputEnterHand = document.getElementById("step-enter-1");
+var blockEnterCopypaste = document.getElementById("step-enter-2");
 
-mainMenuToggler.onclick = function(event) {
-  event.preventDefault();
-  mainMenuToggler.classList.toggle("page-header__menu-toggler--close");
-  mainMenuToggler.classList.toggle("page-header__menu-toggler--open");
-  mainMenuWrapper.classList.toggle("page-header__top-line--open");
+inputEnterHand.onclick = function() {
+  blockinputEnterHand.classList.toggle("form__step--hide");
+  blockEnterCopypaste.classList.toggle("form__step--hide");
 }
 
-function closeMenu() {
-  if (mainMenuWrapper.classList.contains("page-header__top-line--open")) {
-    mainMenuWrapper.classList.remove("page-header__top-line--open");
-    mainMenuToggler.classList.remove("page-header__menu-toggler--close")
-  }
+inputEnterCopypaste.onclick = function() {
+  blockinputEnterHand.classList.toggle("form__step--hide");
+  blockEnterCopypaste.classList.toggle("form__step--hide");
 }
-
-closeMenu();

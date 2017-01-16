@@ -1,6 +1,16 @@
 .field-checkbox {
-  margin-top: 45px;
 
+  &:not(:last-child) {
+    margin-bottom: 37px;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 0;
+    }
+  }
+
+  @media (min-width: $screen-md) {
+    flex-basis: 45%;
+  }
 }
 
 .field-checkbox__input {
