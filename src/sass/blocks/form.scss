@@ -1,25 +1,73 @@
 .form {
-  background-color: $bg-third;
+  padding-top: 35px;
+
+  &--grey-bg {
+    background-color: $bg-third;
+  }
 }
 
 .form__inner {
-  padding-top: 35px;
   padding-bottom: 10px;
+
+  @media (min-width: $screen-lg) {
+    width: 940px;
+    margin: 0 auto;
+  }
 }
 
 .form__promo-text {
   text-align: center;
   line-height: 2em;
-  width: 280px;
-  margin: 0 auto;
+  @include container();
   margin-bottom: 20px;
 
+  @media (min-width: $screen-md) {
+    margin-top: 20px;
+  }
+
+  @media (min-width: $screen-lg) {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
 }
 
 .form__step {
 
   &--white-bg {
     background-color: $bg-main;
+
+    @media (min-width: $screen-lg) {
+      background-color: transparent;
+    }
+  }
+
+  &--promo {
+    @media (min-width: $screen-lg) {
+      width: 100%;
+      padding-top: 30px;
+    }
+  }
+
+  &--hand-enter-keys  {
+
+    .form__step-inner {
+
+      @media (min-width: $screen-lg) {
+        width: 700px;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  &--copypaste-enter-keys  {
+
+    .form__step-inner {
+
+      @media (min-width: $screen-lg) {
+        width: 700px;
+        margin: 0 auto;
+      }
+    }
   }
 }
 
@@ -27,20 +75,39 @@
   display: block;
   text-transform: uppercase;
   color: $second-color;
-  margin-left: 15px;
   font-size: $font-size;
   font-weight: $normal;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .form__step-inner {
-  width: 280px;
-  margin: 0 auto;
+  @include container();
   padding-top: 15px;
   padding-bottom: 25px;
 
-  &--seach-system  .form__step-title{
-    margin-left: 0;
-    text-align: center;
+  &--choise-enter-key {
+
+
+    @media (min-width: $screen-md) {
+      padding-bottom: 10px;
+    }
+
+    @media (min-width: $screen-lg) {
+      width: 100%
+    }
+  }
+
+  &--seach-system {
+
+
+    @media (min-width: $screen-md) {
+      padding-bottom: 20px;
+    }
+
+    @media (min-width: $screen-lg) {
+      width: 100%
+    }
   }
 }
 
@@ -51,4 +118,156 @@
   padding-left: 20px;
   padding-right: 20px;
   padding-bottom: 20px;
+  padding-top: 40px;
+
+  @media (min-width: $screen-md) {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-bottom: 10px;
+  }
+
+  @media (min-width: $screen-lg) {
+    flex-direction: column;
+  }
+
+  & .field-checkbox {
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 20px;
+    }
+
+    @media (min-width: $screen-lg) {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.form__enter-keywords-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  padding-top: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+
+  @media (min-width: $screen-md) {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-bottom: 5px;
+  }
+
+  @media (min-width: $screen-lg) {
+    flex-direction: column;
+  }
+
+  & .field-radio {
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.form__note-wrapper {
+  margin-top: 15px;
+}
+
+.form__note {
+  text-align: center;
+  font-size: $font-size-bigger;
+}
+
+.form__note-star {
+  color: $second-color;
+}
+
+.form__step--hide {
+  display: none;
+}
+
+.form__title {
+  display: none;
+
+  @media (min-width: $screen-md) {
+    display: block;
+    width: 620px;
+    margin: 0 auto;
+    text-align: center;
+    color: $second-color;
+    font-size: $font-size-title;
+    font-weight: $normal;
+  }
+}
+
+.form__steps-wrapper {
+
+  @media (min-width: $screen-lg) {
+    width: 940px;
+    margin: 0 auto;
+  }
+}
+
+.form__container {
+
+  &--flex {
+
+    @media (min-width: $screen-lg) {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: space-around;
+    }
+
+
+    .form__step--order-0 {
+
+      @media (min-width: $screen-lg) {
+        order: 0;
+      }
+    }
+
+    .form__step--order-1 {
+
+      @media (min-width: $screen-lg) {
+        order: 1;
+      }
+    }
+
+    .form__step--order-2 {
+
+      @media (min-width: $screen-lg) {
+        order: 2;
+        flex-basis: 45%;
+      }
+    }
+
+    .form__step--order-3 {
+
+      @media (min-width: $screen-lg) {
+        order: 3;
+        flex-basis: 45%;
+      }
+    }
+
+    .form__step-wrapper--order-4 {
+      @media (min-width: $screen-lg) {
+        order: 4;
+      }
+    }
+
+    .form__step--order-5 {
+      @media (min-width: $screen-lg) {
+        order: 5;
+      }
+    }
+
+    .form__step--order-6 {
+      @media (min-width: $screen-lg) {
+        order: 6;
+      }
+    }
+  }
 }

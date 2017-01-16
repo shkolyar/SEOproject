@@ -1,0 +1,23 @@
+.visually-hidden {
+  display: none;
+
+  @media (min-width: $screen-md) {
+    display: none;
+  }
+
+  @media (min-width: $screen-lg) {
+    display: none;
+  }
+
+  &--sm {
+    display: none;
+
+    @media (min-width: $screen-md) {
+      display: block;
+    }
+
+    @media (min-width: $screen-lg) {
+      display: block;
+    }
+  }
+}
