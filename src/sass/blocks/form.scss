@@ -47,28 +47,6 @@
       padding-top: 30px;
     }
   }
-
-  &--hand-enter-keys  {
-
-    .form__step-inner {
-
-      @media (min-width: $screen-lg) {
-        width: 700px;
-        margin: 0 auto;
-      }
-    }
-  }
-
-  &--copypaste-enter-keys  {
-
-    .form__step-inner {
-
-      @media (min-width: $screen-lg) {
-        width: 700px;
-        margin: 0 auto;
-      }
-    }
-  }
 }
 
 .form__step-title {
@@ -106,7 +84,15 @@
     }
 
     @media (min-width: $screen-lg) {
-      width: 100%
+      width: 100%;
+    }
+  }
+
+  &--small-width {
+
+    @media (min-width: $screen-lg) {
+      width: 750px;
+      margin: 0 auto;
     }
   }
 }

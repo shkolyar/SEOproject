@@ -13,11 +13,20 @@
   border-radius: 40px;
   cursor: pointer;
   background-color: $second-color;
+  background-image: linear-gradient(to right, $pink-dark, $pink-bright);
   -ms-touch-action: manipulation;
   touch-action: manipulation;
   width: 100%;
   white-space: pre-wrap;
   outline: none;
+
+  @media (min-width: $screen-lg) {
+    font-size: $font-size-medium;
+    padding-top: 17px;
+    padding-bottom: 17px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
 }
 
 .btn--large-pink {
@@ -27,6 +36,7 @@
   padding-top: 16px;
   padding-bottom: 16px;
   background-color: $second-color;
+  background-image: linear-gradient(to right, $pink-dark, $pink-bright);
   line-height: 1.667em;
   border: 1px solid $second-color;
   padding-left: 34px;
@@ -42,6 +52,7 @@
   padding-top: 20px;
   padding-bottom: 20px;
   background-color: $main-color;
+  background-image: linear-gradient(to right, $violet-dark, $violet-bright);
   line-height: 1.667em;
   border: 1px solid $main-color;
   padding-left: 34px;

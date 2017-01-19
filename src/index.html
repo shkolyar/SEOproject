@@ -55,7 +55,9 @@
             <div class="promo__content-inner">
               <h1 class="promo__title">Lorem ipsum dolor sit amet, consectetur adipisicing.</h1>
               <p class="promo__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro in debitis illo voluptatem commodi facilis temporibus sed repellendus ullam? Necessitatibus molestiae unde ab, ipsam eligendi facilis sequi distinctio corporis architecto.</p>
-              <a href="" class="btn">Попробовать прямо сейчас!</a>
+              <div class="promo__btn-wrap">
+                <a href="" class="btn">Попробовать прямо сейчас!</a>
+              </div>
             </div>
           </div>
         </div>
@@ -88,7 +90,7 @@
       </div>
     </section>
 
-    <form action="" class="form  form--grey-bg">
+    <!-- <form action="" class="form  form--grey-bg">
       <div class="form__inner">
         <div class="form__container  form__container--flex">
           <div class="form__step  form__step--promo  form__step--order-0">
@@ -99,12 +101,12 @@
           </div>
 
           <div class="form__step  form__step--white-bg  form__step--order-1">
-            <div class="form__step-inner">
-              <h3 class="form__step-title">Адрес сайта</h3>
+            <div class="form__step-inner  form__step-inner--small-width">
+              <h3 class="form__step-title">Введите адрес сайта</h3>
               <div class="field-text">
                 <label class="field-text__name  visually-hidden" for="text-field-1">Lorem ipsum dolor.</label>
                 <div class="field-text__input-wrap">
-                  <input class="field-text__input" id="text-field-1" type="text" placeholder="Введите адрес сайта">
+                  <input class="field-text__input" id="text-field-1" type="text" placeholder="http://">
                 </div>
               </div>
             </div>
@@ -133,7 +135,7 @@
           <div class="form__step-wrapper  form__step-wrapper--order-4">
 
             <div class="form__step  form__step--white-bg  form__step--hand-enter-keys" id="step-enter-1">
-              <div class="form__step-inner">
+              <div class="form__step-inner  form__step-inner--small-width">
                 <h3 class="form__step-title">Введите необходимое количество ключевых слов</h3>
                 <div class="field-text  field-text--keyword">
                   <label class="field-text__name  visually-hidden" for="text-field-1">Ключевое слово</label>
@@ -146,9 +148,9 @@
             </div>
 
             <div class="form__step  form__step--white-bg  form__step--copypaste-enter-keys  form__step--hide"  id="step-enter-2">
-              <div class="form__step-inner">
+              <div class="form__step-inner  form__step-inner--small-width">
                 <h3 class="form__step-title">Введите необходимое количество ключевых слов</h3>
-                <textarea class="field-text__textarea" name="review" cols="30" rows="10" placeholder="Каждое ключевое слово или фразу вводите через запятую или с новой строки*"></textarea>
+                <textarea class="field-text__textarea" name="review" cols="30" rows="10" placeholder="Новое ключевое слово или фразу вводите через запятую или с новой строки*"></textarea>
                 <div class="form__note-wrapper">
                   <p class="form__note"><span class="form__note-star">*</span> — Обрати внимание на разделители ключевых запросов (запятая или новая строка)</p>
                 </div>
@@ -179,7 +181,7 @@
           </div>
 
           <div class="form__step  form__step--white-bg  form__step--country  form__step--order-5">
-            <div class="form__step-inner">
+            <div class="form__step-inner  form__step-inner--small-width">
               <label class="field-select">
                 <div class="field-select__name">
                   Страна
@@ -202,18 +204,46 @@
           </div>
 
           <div class="form__step  form__step--button  form__step--order-6">
-            <div class="form__step-inner">
-              <button type="submit" class="btn--large-form">Проверить</button>
+            <div class="form__step-inner  form__step-inner--small-width">
+              <button type="submit" class="btn--large-form">Проверяем позиции сайта</button>
             </div>
           </div>
 
         </div>
       </div>
-    </form>
+    </form> -->
+
+    <section class="loader">
+      <div class="loader__inner">
+        <h1 class="loader__title">
+          Lorem ipsum.
+        </h1>
+        <p class="loader__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, eligendi <br><span class="loader__progress">10%</span></p>
+        <div class="loader__load">
+          <span class="loader__bar">
+          </span>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="search-result">
+      <div class="search-result__inner">
+        <h1 class="search-result__title">
+          Lorem ipsum.
+        </h1>
+        <p class="loader__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, eligendi <br><span class="loader__progress">10%</span></p>
+        <div class="loader__load">
+          <span class="loader__bar">
+          </span>
+        </div>
+      </div>
+    </section>
+
   </main>
   <footer class="page-footer">
     <p class="page-footer__text" style="color: white; text-align: center; font-size: 24px; font-weight: bold;">Lorem ipsum dolor.</p>
   </footer>
-  <script src="js/script.js" charset="utf-8"></script>
+  <!-- <script src="js/script.js" charset="utf-8"></script> -->
 </body>
 </html>

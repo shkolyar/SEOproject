@@ -29,6 +29,10 @@
       background-size: 900px 900px;
       background-position: center -175px;
     }
+
+    @media (min-width: $screen-lg) {
+      bottom: 60px;
+    }
   }
 
   @media (min-width: $screen-md) {
@@ -42,6 +46,8 @@
     position: relative;
     width: 940px;
     margin: 0 auto;
+    padding-top: 60px;
+    padding-bottom: 60px;
   }
 }
 
@@ -74,10 +80,27 @@
 .promo__title {
   line-height: 1em;
   color: $font-second-color;
+
+  @media (min-width: $screen-md) {
+    font-size: $font-size-biggest;
+  }
+
+  @media (min-width: $screen-lg) {
+    font-size: $font-size-super-big;
+  }
 }
 
 .promo__text {
   color: $font-second-color;
+  margin-top: 30px;
+
+  @media (min-width: $screen-md) {
+    font-size: $font-size-bigger;
+  }
+
+  @media (min-width: $screen-lg) {
+    font-size: $font-size-big;
+  }
 }
 
 .promo__content {
@@ -85,5 +108,21 @@
   @media (min-width: $screen-md) {
     float: left;
     width: 320px;
+  }
+
+  @media (min-width: $screen-lg) {
+    float: left;
+    width: 600px;
+  }
+}
+
+
+.promo__btn-wrap {
+  padding-top: 15px;
+
+  @media (min-width: $screen-lg) {
+    width: 55%;
+    margin: 0 auto;
+    padding-top: 25px;
   }
 }
