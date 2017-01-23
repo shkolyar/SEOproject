@@ -2,55 +2,35 @@
 <html lang="ru">
 <head>
     <meta charset="utf-8">
-    <title>SeoFocus</title>
+    <title>SeoFocus: снятие позиций вашего сайта</title>
     <meta content='width=device-width, initial-scale=1.0' name='viewport'>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-  <header class="page-header">
+  <header class="page-header  page-header--main">
+    <h1 class="hidden">SeoFocus</h1>
     <div class="page-header__inner">
-      <div id="main-menu-wrapper" class="page-header__top-line page-header__top-line--open">
+      <div id="main-menu-wrapper" class="page-header__top-line">
         <div class="page-header__top-line-inner">
           <a href="" class="main-logo">
-            <img src="" class="main-logo__picture" width="213" height="58" alt="SeoFocus">
+            <picture>
+              <source
+                srcset="img/logo-desktop@2x.png 2x, img/logo-desktop@1x.png 1x"
+                media="(min-width: 960px)">
+              <source
+                srcset="img/logo-tablet@2x.png 2x, img/logo-tablet@1x.png 1x"
+                media="(min-width: 660px)">
+              <img src="img/logo-mobile@1x.png"
+                  srcset="img/logo-mobile@2x.png 2x, img/logo-mobile@1x.png 1x"
+                  alt="SeoFocus" class="main-logo__img" width="210" height="37">
+              </picture>
           </a>
-          <!-- <span id="main-menu-toggler" class="page-header__menu-toggler  page-header__menu-toggler--close  page-header__menu-toggler--open"><span></span></span> -->
         </div>
-        <!-- <nav class="main-nav">
-          <div class="main-nav__dropdown">
-            <div class="main-nav__dropdown-inner">
-              <ul class="main-nav__list  main-nav__list--user">
-                <li class="main-nav__item  main-nav__item--user">
-                  <div class="main-nav__item-inner">
-                    <a href="" class="main-nav__link">
-                      <span class="main-nav__icon">
-                        <svg width="30" height="30"></svg>
-                      </span>
-                      Регистрация
-                    </a>
-                  </div>
-                </li>
-                <li class="main-nav__item  main-nav__item--login">
-                  <div class="main-nav__item-inner">
-                    <a href="" class="main-nav__link">
-                      <span class="main-nav__icon">
-                        <svg width="30" height="30"></svg>
-                      </span>
-                      Войти
-                    </a>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav> -->
       </div>
-      <div class="promo">
+      <div class="promo  promo--main">
         <div class="promo__inner">
-          <!-- <div class="promo__img">
-          </div> -->
           <div class="promo__content">
             <div class="promo__content-inner">
               <h1 class="promo__title">Lorem ipsum dolor sit amet, consectetur adipisicing.</h1>
@@ -90,7 +70,7 @@
       </div>
     </section>
 
-    <!-- <form action="" class="form  form--grey-bg">
+    <form action="" class="form  form--grey-bg">
       <div class="form__inner">
         <div class="form__container  form__container--flex">
           <div class="form__step  form__step--promo  form__step--order-0">
@@ -211,39 +191,11 @@
 
         </div>
       </div>
-    </form> -->
-
-    <section class="loader">
-      <div class="loader__inner">
-        <h1 class="loader__title">
-          Lorem ipsum.
-        </h1>
-        <p class="loader__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, eligendi <br><span class="loader__progress">10%</span></p>
-        <div class="loader__load">
-          <span class="loader__bar">
-          </span>
-        </div>
-      </div>
-    </section>
-
-
-    <section class="search-result">
-      <div class="search-result__inner">
-        <h1 class="search-result__title">
-          Lorem ipsum.
-        </h1>
-        <p class="loader__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, eligendi <br><span class="loader__progress">10%</span></p>
-        <div class="loader__load">
-          <span class="loader__bar">
-          </span>
-        </div>
-      </div>
-    </section>
-
+    </form>
   </main>
   <footer class="page-footer">
     <p class="page-footer__text" style="color: white; text-align: center; font-size: 24px; font-weight: bold;">Lorem ipsum dolor.</p>
   </footer>
-  <!-- <script src="js/script.js" charset="utf-8"></script> -->
+  <script src="js/script.js" charset="utf-8"></script>
 </body>
 </html>
