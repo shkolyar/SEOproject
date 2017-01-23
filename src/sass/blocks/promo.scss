@@ -1,72 +1,66 @@
-.promo__inner {
-  padding-top: 300px;
-  padding-bottom: 30px;
-  @include clearfix();
-  position: relative;
-  width: 280px;
-  @include container();
+.promo {
 
-  &:before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 300px;
-    background-image: url("../img/file.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    top: 45px;
-    left: 0;
-    right: 0;
-    background-size: 750px 750px;
+  &--main {
 
-    @media (min-width: $screen-md) {
-      position: absolute;
-      width: 300px;
-      height: 350px;
-      top: auto;
-      bottom: 30px;
-      left: auto;
-      background-size: 900px 900px;
-      background-position: center -175px;
+    .promo__inner {
+      padding-top: 320px;
+      @include clearfix();
+      position: relative;
+
+      &:before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 300px;
+        background-image: url("../img/file.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        top: 57px;
+        left: 0;
+        right: 0;
+        background-size: 750px 750px;
+        z-index: 1;
+
+        @media (min-width: $screen-md) {
+          position: absolute;
+          width: 300px;
+          height: 350px;
+          top: auto;
+          bottom: 30px;
+          left: auto;
+          background-size: 900px 900px;
+          background-position: center -175px;
+        }
+
+        @media (min-width: $screen-lg) {
+          bottom: 60px;
+        }
+      }
+
+      @media (min-width: $screen-md) {
+        position: relative;
+        padding-top: 30px;
+      }
+
+      @media (min-width: $screen-lg) {
+        position: relative;
+        padding-top: 60px;
+        padding-bottom: 60px;
+      }
     }
 
-    @media (min-width: $screen-lg) {
-      bottom: 60px;
+    .promo__title {
+      font-weight: $bold;
     }
-  }
-
-  @media (min-width: $screen-md) {
-    position: relative;
-    width: 620px;
-    margin: 0 auto;
-    padding-top: 30px;
-  }
-
-  @media (min-width: $screen-lg) {
-    position: relative;
-    width: 940px;
-    margin: 0 auto;
-    padding-top: 60px;
-    padding-bottom: 60px;
   }
 }
 
-// .promo__img {
-//   width: 100%;
-//   height: 250px;
-//   background-image: url("../img/file.svg");
-//   background-repeat: no-repeat;
-//   background-position: center;
-//   background-size: 500px 550px;
-
-//   @media (min-width: $screen-md) {
-//     position: absolute;
-//     width: 300px;
-//     height: calc(100% - 70px);
-//     right: 0;
-//     bottom: 30px;
-//   }
-// }
+.promo__inner {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  @include container();
+  text-align: center;
+}
 
 .promo__content-inner {
   text-align: center;
@@ -78,8 +72,9 @@
 }
 
 .promo__title {
-  line-height: 1em;
+  line-height: 1.2em;
   color: $font-second-color;
+  font-weight: $light;
 
   @media (min-width: $screen-md) {
     font-size: $font-size-biggest;
@@ -104,6 +99,8 @@
 }
 
 .promo__content {
+  position: relative;
+  z-index: 10;
 
   @media (min-width: $screen-md) {
     float: left;
