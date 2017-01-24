@@ -13,12 +13,13 @@
   border-radius: 40px;
   cursor: pointer;
   background-color: $second-color;
+  line-height: 1.2em;
   background-image: linear-gradient(to right, $pink-dark, $pink-bright);
   -ms-touch-action: manipulation;
   touch-action: manipulation;
   width: 100%;
   white-space: pre-wrap;
-  outline: none;
+  border: none;
 
   @media (min-width: $screen-lg) {
     font-size: $font-size-medium;
@@ -38,7 +39,7 @@
   background-color: $second-color;
   background-image: linear-gradient(to right, $pink-dark, $pink-bright);
   line-height: 1.667em;
-  border: 1px solid $second-color;
+  border: none;
   padding-left: 34px;
   padding-right: 34px;
   color: $font-second-color;
@@ -54,10 +55,16 @@
   background-color: $main-color;
   background-image: linear-gradient(to right, $violet-dark, $violet-bright);
   line-height: 1.667em;
-  border: 1px solid $main-color;
   padding-left: 34px;
   padding-right: 34px;
   color: $font-second-color;
   font-size: $font-size-bigger;
   font-weight: $bold;
+  border: none;
+}
+
+
+.btn--reload {
+  border-radius: 20px;
+  font-weight: $normal;
 }

@@ -30,7 +30,7 @@
       </div>
     </div>
     <div class="promo">
-      <div class="promo__inner">
+      <div class="promo__inner  promo__inner--padding">
         <h1 class="promo__title">Проверка позиций вашего сайта</h1>
       </div>
     </div>
@@ -41,22 +41,82 @@
     <section class="loader">
       <div class="loader__inner">
         <h1 class="loader__title">
-          Lorem ipsum.
+          Выполняется проверка
         </h1>
-        <p class="loader__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, eligendi <br><span class="loader__progress">10%</span></p>
         <div class="loader__load">
-          <span class="loader__bar">
+          <span class="loader__bar  loader__bar--load">
           </span>
+        </div>
+        <div class="loader__note-wrap">
+          <p class="note">Нажмите кнопку <br><span class="note__quotes">&laquo;</span>Обновить страницу<span class="note__quotes">&raquo;</span> ,<br> чтобы узнать статус проверки и получить результаты
+        </div>
+        <div class="loader__btn-wrap">
+          <button class="btn  btn--reload">Обновить страницу</button>
+        </div>
+        <div class="loader__note-wrap">
+          <p class="note"><span class="note__star">*</span> &mdash; Результаты появляются ниже по мере прохождения проверки</p>
         </div>
       </div>
     </section>
 
-    <section class="search-result">
-      <div class="search-result__inner">
-        <h1 class="search-result__title">
-          Lorem ipsum.
+    <section class="loader  loader--success">
+      <div class="loader__inner">
+        <h1 class="loader__title">
+          Проверка прошла успешно!
         </h1>
-        <p class="loader__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, eligendi <br><span class="loader__progress">10%</span></p>
+        <div class="loader__load">
+          <span class="loader__bar  loader__bar--success">
+          </span>
+        </div>
+        <div class="loader__note-wrap">
+          <p class="note"><span class="note__star">*</span> &mdash; Результаты проверки находятся ниже</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="loader  loader--error">
+      <div class="loader__inner">
+        <h1 class="loader__title">
+          Что-то пошло не так :(
+        </h1>
+        <div class="loader__load">
+          <span class="loader__bar  loader__bar--error">
+          </span>
+        </div>
+        <div class="loader__note-wrap">
+          <p class="note">Некоторые сервисы сейчас недоступны. Обновите запрос или повторите заявку позднее.
+          <p class="note"><span class="note__star">*</span> &mdash; Полученные результаты проверки находятся ниже</p>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="result">
+      <div class="result__inner">
+        <h1 class="result__title">
+          Результаты снятия позиции сайта
+        </h1>
+        <table class="table  table-responsive  table-responsive--horizontal">
+          <thead>
+            <tr>
+              <th>Ключевое слово</th>
+              <th>Яндекс(картинка)</th>
+              <th>Гугл(картинка)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-label="Ключевое слово">Анатоле Вассерман</td>
+              <td data-label="Яндекс(картинка)">3</td>
+              <td data-label="Гугл(картинка)">3</td>
+            </tr>
+            <tr>
+              <td data-label="Ключевое слово">Джакомо Казанова</td>
+              <td data-label="Яндекс(картинка)">3</td>
+              <td data-label="Гугл(картинка)">3</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </section>
 
