@@ -14,6 +14,7 @@
   padding-left: 20px;
   padding-right: 20px;
   line-height: 1em;
+  font-weight: $normal;
 
   @media (min-width: $screen-lg) {
     font-size: $font-size-biggest;
@@ -56,20 +57,61 @@
 
 .loader__bar {
 
-  &:before {
-    content: "";
-    display: block;
-    width: 5em;
-    height: 5em;
-    background-image: url("../img/circle.svg");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    background-position: center;
-    animation: loader-rotate 1s linear infinite;
+  &--load {
 
-    @media (min-width: $screen-lg) {
-      width: 8em;
-      height: 8em;
+    &:before {
+      content: "";
+      display: block;
+      width: 5em;
+      height: 5em;
+      background-image: url("../img/circle.svg");
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      background-position: center;
+      animation: loader-rotate 1s linear infinite;
+
+      @media (min-width: $screen-lg) {
+        width: 8em;
+        height: 8em;
+      }
+    }
+  }
+
+  &--success {
+
+    &:before {
+      content: "";
+      display: block;
+      width: 5em;
+      height: 5em;
+      background-image: url("../img/icon-yes.svg");
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      background-position: center;
+
+      @media (min-width: $screen-lg) {
+        width: 8em;
+        height: 8em;
+      }
+    }
+  }
+
+  &--error {
+
+    &:before {
+      content: "";
+      display: block;
+      width: 5em;
+      height: 5em;
+      background-image: url("../img/icon-no.svg");
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      background-position: center;
+
+      @media (min-width: $screen-lg) {
+        width: 8em;
+        height: 8em;
+      }
     }
   }
 }
@@ -82,5 +124,28 @@
 
   100% {
     transform: rotate(360deg);
+  }
+}
+
+
+.loader__note-wrap {
+  padding-top: 27px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.loader__btn-wrap {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+
+  @media (min-width: $screen-md) {
+    padding-left: 132px;
+    padding-right: 132px;
+  }
+
+  @media (min-width: $screen-lg) {
+    padding-left: 200px;
+    padding-right: 200px;
   }
 }

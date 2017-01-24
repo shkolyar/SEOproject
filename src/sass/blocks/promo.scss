@@ -6,6 +6,7 @@
       padding-top: 320px;
       @include clearfix();
       position: relative;
+      padding-bottom: 42px;
 
       &:before {
         content: '';
@@ -57,9 +58,19 @@
 
 .promo__inner {
   padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 42px;
   @include container();
   text-align: center;
+
+  @media (min-width: $screen-md) {
+    padding-top: 40px;
+    padding-bottom: 57px;
+  }
+
+  @media (min-width: $screen-lg) {
+    padding-top: 52px;
+    padding-bottom: 78px;
+  }
 }
 
 .promo__content-inner {
