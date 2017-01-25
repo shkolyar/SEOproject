@@ -88,13 +88,13 @@
     }
   }
 
-  &--small-width {
+  // &--small-width {
 
-    @media (min-width: $screen-lg) {
-      width: 750px;
-      margin: 0 auto;
-    }
-  }
+  //   @media (min-width: $screen-lg) {
+  //     width: 750px;
+  //     margin: 0 auto;
+  //   }
+  // }
 }
 
 .form__search-list {

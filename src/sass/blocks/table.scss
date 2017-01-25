@@ -3,46 +3,34 @@
   width: 100%;
   border: 1px solid $pink-dark;
 
-  caption {
-    // padding: round(0.6em * (100 / $font-size--small-percent ), 2);
-    text-align: right;
-    caption-side: bottom;
-    font-size: $font-size--small-percent;
-    line-height: 1em;
-    color: $font-main-color;
-  }
-
   td,
   th {
     vertical-align: top;
     border-bottom: 1px solid $pink-dark;
-
-    &:not(:first-child) {
-      border-left: 1px solid $pink-dark;
-    }
+    padding: 1.6em;
   }
 
   th {
-    text-align: left;
-    padding: 0.6em;
+    text-align: center;
   }
 
-  td {
-    padding: 0.6em;
+  &--hover {
+
+    tbody {
+
+      tr:hover {
+
+        @media (min-width: $screen-md) {
+          background-color: $grey;
+        }
+      }
+    }
   }
 }
 
-.table-responsive {
-
-  @media (max-width: ($screen-md - 1)) {
+.table--responsive {
     display: block;
     border: 0;
-
-    caption {
-      display: block;
-      width: 100%;
-      text-align: left;
-    }
 
     thead {
       display: none;
@@ -58,7 +46,7 @@
         border-bottom: 0;
 
         &:not(:last-child) {
-          margin-bottom: 1em;
+          margin-bottom: 2em;
         }
       }
 
@@ -67,12 +55,64 @@
         width: 100%;
         border-right: 0;
         border-left: 0;
+        font-size: $font-size-bigger;
 
         &:before {
           display: block;
           font-weight: 700;
           content: attr(data-label);
+          margin-bottom: 1.1em;
+          font-size: $font-size-bigger;
         }
+      }
+  }
+
+  @media (min-width: $screen-md) {
+    display: table;
+    border: 1px solid $pink-dark;
+
+    thead {
+      display: table-header-group;
+      background-color: $bg-second;
+    }
+
+    tbody {
+      display: table-row-group;
+      vertical-align: middle;
+
+      tr {
+        display: table-row;
+
+        &:not(:last-child) {
+          margin-bottom: 0;
+        }
+      }
+
+      td {
+        display: table-cell;
+        width: auto;
+
+        &:before {
+          display: none;
+        }
+      }
+    }
+
+    th {
+      font-size: $font-size-bigger;
+    }
+  }
+
+  @media (min-width: $screen-lg) {
+
+    th {
+      font-size: $font-size-big;
+    }
+
+    tbody {
+
+      td {
+        font-size: $font-size-big;
       }
     }
   }

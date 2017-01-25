@@ -44,6 +44,13 @@
   padding-right: 34px;
   color: $font-second-color;
   font-size: $font-size;
+  border-radius: 0;
+  font-weight: $normal;
+
+  @media (min-width: $screen-lg) {
+    font-size: $font-size-medium;
+    text-transform: initial;
+  }
 }
 
 .btn--large-form {
@@ -61,10 +68,35 @@
   font-size: $font-size-bigger;
   font-weight: $bold;
   border: none;
+  border-radius: 0;
+
+  @media (min-width: $screen-lg) {
+    font-size: $font-size-medium;
+  }
 }
 
 
 .btn--reload {
   border-radius: 20px;
   font-weight: $normal;
+}
+
+.btn--new-request {
+  font-weight: $normal;
+  font-size: $font-size;
+
+  @media (min-width: $screen-lg) {
+    text-transform: initial;
+  }
+}
+
+.btn--load-file {
+  margin-top: 0;
+
+  @media (min-width: $screen-md) {
+    padding-left: 34px;
+    padding-right: 34px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
 }
