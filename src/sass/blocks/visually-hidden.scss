@@ -20,4 +20,16 @@
       display: block;
     }
   }
+
+  &--sm-md {
+    display: none;
+
+    @media (min-width: $screen-md) {
+      display: none;
+    }
+
+    @media (min-width: $screen-lg) {
+      display: block;
+    }
+  }
 }

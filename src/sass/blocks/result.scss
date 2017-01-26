@@ -37,6 +37,10 @@
 .result__subtitle {
   font-size: $font-size-bigger;
 
+  @media (min-width: $screen-lg) {
+    font-size: $font-size-big;
+  }
+
   &--pink {
     color: $pink-dark;
   }
