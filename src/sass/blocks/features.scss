@@ -23,7 +23,7 @@
   margin: 0;
   padding: 0;
   list-style: none;
-  padding-top: 20px;
+  padding-top: 30px;
 
   @media (min-width: $screen-md) {
     width: 450px;
@@ -39,7 +39,7 @@
 }
 
 .features__item {
-  margin-bottom: 35px;
+  margin-bottom: 45px;
   padding-top: 100px;
   position: relative;
 
@@ -59,14 +59,14 @@
     }
   }
 
-  &--target {
+  &--responsive {
 
     &:before {
       content: "";
       position: absolute;
       width: 100px;
       height: 100px;
-      background-image: url("../img/target.svg");
+      background-image: url("../img/responsive.svg");
       background-repeat: no-repeat;
       background-size: 100px 100px;
       top: 0;

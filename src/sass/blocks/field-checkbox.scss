@@ -24,7 +24,10 @@
   line-height: 1.667em;
   padding-left: 3.889em;
   position: relative;
-  display: block;
+  display: flex;
+  align-items: center;
+  flex-wrap:wrap;
+  white-space: pre-line;
 
   @media (min-width: $screen-md) {
     padding-left: 59px;
@@ -35,7 +38,7 @@
   width: 39px;
   height: 39px;
   position: absolute;
-  top: -5px;
+  top: -2px;
   left: 0;
   content: "";
   background-color: $bg-main;
@@ -56,7 +59,7 @@
   width: 25px;
   height: 25px;
   position: absolute;
-  top: 1px;
+  top: 5px;
   left: 7px;
   content: "";
   background-image: url("../img/icon-yes-form.svg");

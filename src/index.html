@@ -55,19 +55,22 @@
   <main>
     <section class="features">
       <div class="features__inner">
-        <h1 class="features__title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam, ea!</h1>
+        <h1 class="features__title">
+          <p>Хотите быстро получить точные результаты?</p>
+          <p> Нам есть, что вам предложить!</p>
+        </h1>
         <ul class="features__list">
           <li class="features__item  features__item--load-report">
-            <h2 class="features__item-title">Lorem ipsum dolor sit amet.</h2>
-            <p class="features__item-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae dolore sunt provident amet, nam reprehenderit eligendi labore vitae nihil aliquid.</p>
+            <h2 class="features__item-title">Экономим Ваше время</h2>
+            <p class="features__item-text">Начните изучать отчет пока идет загрузка. Результаты появляются постепенно, по мере выполнения проверки</p>
           </li>
-          <li class="features__item  features__item--target">
-            <h2 class="features__item-title">Lorem ipsum dolor sit amet.</h2>
-            <p class="features__item-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel unde facere reprehenderit reiciendis deleniti, quis blanditiis eius, eligendi numquam consequuntur animi voluptas repellat.</p>
+          <li class="features__item  features__item--responsive">
+            <h2 class="features__item-title">Доступен для всех</h2>
+            <p class="features__item-text">Заходите к нам со смартфона или планшета, пока пьете кофе, с компьютера во время рабочего дня. Снятие позиций Ваших сайтов работает на любых устройствах</p>
           </li>
           <li class="features__item  features__item--save-file">
-            <h2 class="features__item-title">Lorem ipsum dolor sit amet.</h2>
-            <p class="features__item-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis delectus, voluptatem distinctio doloremque quia, rem vero omnis reprehenderit officia, magni enim sit.</p>
+            <h2 class="features__item-title">Покажите отчет коллегам</h2>
+            <p class="features__item-text">Вы можете сохранить отчет в PDF формате, отправить коллегам, показать добросоветсному или нерадивому SEOшнику</p>
           </li>
         </ul>
       </div>
@@ -89,7 +92,7 @@
               <div class="field-text">
                 <label class="field-text__name  visually-hidden" for="text-field-1">Lorem ipsum dolor.</label>
                 <div class="field-text__input-wrap">
-                  <input class="field-text__input" id="text-field-1" type="text" placeholder="http://">
+                  <input class="field-text__input" id="text-field-1" type="url" placeholder="http://" required="required">
                 </div>
               </div>
             </div>
@@ -123,7 +126,7 @@
                 <div class="field-text  field-text--keyword">
                   <label class="field-text__name  visually-hidden" for="text-field-1">Ключевое слово</label>
                   <div class="field-text__input-wrap">
-                    <input class="field-text__input" id="text-field-1" type="text" placeholder="Ключевое слово">
+                    <input class="field-text__input" id="text-field-1" type="text" placeholder="Ключевое слово" required="required" pattern="^[A-Za-zА-Яа-яЁё\s]+$">
                   </div>
                 </div>
                 <button type="button" class="btn--large-pink">Еще ключевое слово</button>
@@ -133,7 +136,7 @@
             <div class="form__step  form__step--white-bg  form__step--copypaste-enter-keys  form__step--hide"  id="step-enter-2">
               <div class="form__step-inner  form__step-inner--small-width">
                 <h3 class="form__step-title">Введите необходимое количество ключевых слов</h3>
-                <textarea class="field-text__textarea" name="review" cols="30" rows="10" placeholder="Новое ключевое слово или фразу вводите через запятую или с новой строки*"></textarea>
+                <textarea class="field-text__textarea" name="review" cols="30" rows="10" placeholder="Новое ключевое слово или фразу вводите через запятую или с новой строки*" required="required" pattern="^[A-Za-zА-Яа-яЁё\s]+$"></textarea>
                 <div class="form__note-wrapper">
                   <p class="note"><span class="note__star">*</span> &mdash; Обрати внимание на разделители ключевых запросов (запятая или новая строка)</p>
                 </div>
@@ -150,13 +153,13 @@
                 <li class="field-checkbox">
                   <label class="field-checkbox__name">
                     <input type="checkbox" class="field-checkbox__input" checked>
-                    <span class="field-checkbox__name-text"><svg width="32" height="32"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-yandex"></use></svg><span>Яндекс</span></span>
+                    <span class="field-checkbox__name-text"><svg width="35" height="35"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-yandex"></use></svg><span>&ensp;(Яндекс)</span></span>
                   </label>
                 </li>
                 <li class="field-checkbox">
                   <label class="field-checkbox__name">
                     <input type="checkbox" class="field-checkbox__input" checked>
-                    <span class="field-checkbox__name-text">Гугл (картинка?)</span>
+                    <span class="field-checkbox__name-text"><svg width="35" height="35"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-google"></use></svg><span>&ensp;(Google)</span></span>
                   </label>
                 </li>
               </ul>

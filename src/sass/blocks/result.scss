@@ -75,3 +75,24 @@
     flex-basis: 40%;
   }
 }
+
+.result__svg-wrap {
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+
+  &--margin {
+    margin-left: 15px;
+  }
+}
+
+.result__position {
+
+  &--error {
+
+    .result__number {
+      display: none;
+    }
+  }
+}
+
