@@ -61,7 +61,7 @@
           display: block;
           font-weight: 700;
           content: attr(data-label);
-          margin-bottom: 1.1em;
+          margin-bottom: 1.5em;
           font-size: $font-size-bigger;
         }
       }
@@ -91,6 +91,7 @@
       td {
         display: table-cell;
         width: auto;
+        vertical-align: middle;
 
         &:before {
           display: none;

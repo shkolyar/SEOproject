@@ -17,12 +17,13 @@
 
 .form__promo-text {
   text-align: center;
-  line-height: 2em;
+  line-height: 2.143em;
   @include container();
   margin-bottom: 20px;
 
   @media (min-width: $screen-md) {
     margin-top: 20px;
+    font-size: $font-size-big;
   }
 
   @media (min-width: $screen-lg) {
@@ -154,6 +155,10 @@
     @media (min-width: $screen-md) {
       margin-bottom: 30px;
     }
+
+    @media (min-width: $screen-lg) {
+      margin-bottom: 40px;
+    }
   }
 }
 
@@ -168,14 +173,13 @@
 .form__title {
   display: none;
 
-  @media (min-width: $screen-md) {
-    display: block;
-    width: 620px;
-    margin: 0 auto;
+  @media (min-width: $screen-lg) {
     text-align: center;
     color: $second-color;
     font-size: $font-size-title;
     font-weight: $normal;
+    padding-left: 200px;
+    padding-right: 200px;
   }
 }
 
