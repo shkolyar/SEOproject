@@ -20,6 +20,7 @@
   width: 100%;
   white-space: pre-wrap;
   border: none;
+  cursor: pointer;
 
   @media (min-width: $screen-lg) {
     font-size: $font-size-medium;

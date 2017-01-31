@@ -43,7 +43,7 @@
               <h1 class="promo__title">Lorem ipsum dolor sit amet, consectetur adipisicing.</h1>
               <p class="promo__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro in debitis illo voluptatem commodi facilis temporibus sed repellendus ullam? Necessitatibus molestiae unde ab, ipsam eligendi facilis sequi distinctio corporis architecto.</p>
               <div class="promo__btn-wrap">
-                <a href="" class="btn">Попробовать прямо сейчас!</a>
+                <a href="#form" class="btn">Попробовать прямо сейчас!</a>
               </div>
             </div>
           </div>
@@ -76,7 +76,7 @@
       </div>
     </section>
 
-    <form action="" class="form  form--grey-bg">
+    <form action="" class="form  form--grey-bg" id="form">
       <div class="form__inner">
         <div class="form__container  form__container--flex">
           <div class="form__step  form__step--promo  form__step--order-0">
@@ -92,7 +92,7 @@
               <div class="field-text">
                 <label class="field-text__name  visually-hidden" for="text-field-1">Lorem ipsum dolor.</label>
                 <div class="field-text__input-wrap">
-                  <input class="field-text__input" id="text-field-1" type="url" placeholder="http://" required="required">
+                  <input class="field-text__input  field-text__input--required" id="text-field-url" type="url" placeholder="http://" name="URL" required>
                 </div>
               </div>
             </div>
@@ -104,13 +104,13 @@
               <ul class="form__enter-keywords-list">
                 <li class="field-radio">
                   <label class="field-radio__name">
-                    <input type="radio" name="enter-key-type" value="hand-enter-key" class="field-radio__input" id="enter-type-1" checked>
+                    <input type="radio" name="enter-key-type" value="hand-enter-key" class="field-radio__input" id="enter-type-1">
                     <span class="field-radio__name-text  field-radio__name-text--hand">Введу слова вручную</span>
                   </label>
                 </li>
                 <li class="field-radio">
                   <label class="field-radio__name">
-                    <input type="radio" name="enter-key-type" value="copypaste-enter-key" class="field-radio__input" id="enter-type-2">
+                    <input type="radio" name="enter-key-type" value="copypaste-enter-key" class="field-radio__input" id="enter-type-2" checked>
                     <span class="field-radio__name-text">Скопирую список из документа</span>
                   </label>
                 </li>
@@ -120,25 +120,25 @@
 
           <div class="form__step-wrapper  form__step-wrapper--order-4">
 
-            <div class="form__step  form__step--white-bg  form__step--hand-enter-keys" id="step-enter-1">
+            <div class="form__step  form__step--white-bg  form__step--hand-enter-keys  form__step--hide" id="step-enter-1">
               <div class="form__step-inner  form__step-inner--small-width">
-                <h3 class="form__step-title">Введите необходимое количество ключевых слов</h3>
+                <h3 class="form__step-title">Введите ключевые слова</h3>
                 <div class="field-text  field-text--keyword">
                   <label class="field-text__name  visually-hidden" for="text-field-1">Ключевое слово</label>
                   <div class="field-text__input-wrap">
-                    <input class="field-text__input" id="text-field-1" type="text" placeholder="Ключевое слово" required="required" pattern="^[A-Za-zА-Яа-яЁё\s]+$">
+                    <input class="field-text__input  field-text__input--required" name="keyword" id="text-field-keyword" type="text" placeholder="Ключевое слово" pattern="^[A-Za-zА-Яа-яЁё\s]+$">
                   </div>
                 </div>
-                <button type="button" class="btn--large-pink">Еще ключевое слово</button>
+                <button type="button" class="btn  btn--large-pink  btn--new-keyword">Еще ключевое слово</button>
               </div>
             </div>
 
-            <div class="form__step  form__step--white-bg  form__step--copypaste-enter-keys  form__step--hide"  id="step-enter-2">
+            <div class="form__step  form__step--white-bg  form__step--copypaste-enter-keys"  id="step-enter-2">
               <div class="form__step-inner  form__step-inner--small-width">
-                <h3 class="form__step-title">Введите необходимое количество ключевых слов</h3>
-                <textarea class="field-text__textarea" name="review" cols="30" rows="10" placeholder="Новое ключевое слово или фразу вводите через запятую или с новой строки*" required="required" pattern="^[A-Za-zА-Яа-яЁё\s]+$"></textarea>
+                <h3 class="form__step-title">Введите ключевые слова</h3>
+                <textarea class="field-text__textarea  field-text__input--required" name="keywords" id="textarea-keywords" cols="30" rows="10" placeholder="Каждое ключевое слово или фразу вводите через запятую или с новой строки*" pattern="^[A-Za-zА-Яа-яЁё\s]+$"  required></textarea>
                 <div class="form__note-wrapper">
-                  <p class="note"><span class="note__star">*</span> &mdash; Обрати внимание на разделители ключевых запросов (запятая или новая строка)</p>
+                  <p class="note"><span class="note__star">*</span> &mdash; Обратите внимание на разделители ключевых запросов (запятая или новая строка)</p>
                 </div>
               </div>
             </div>
@@ -183,7 +183,7 @@
               <div class="field-text">
                 <label class="field-text__name" for="text-field-1">Регион поиска</label>
                 <div class="field-text__input-wrap">
-                  <input class="field-text__input" id="text-field-1" type="text" placeholder="Введите регион">
+                  <input class="field-text__input" id="text-field-region" type="text" placeholder="Введите регион" name="region">
                 </div>
               </div>
             </div>
@@ -191,7 +191,7 @@
 
           <div class="form__step  form__step--button  form__step--order-6">
             <div class="form__step-inner  form__step-inner--small-width">
-              <button type="submit" class="btn--large-form">Проверяем позиции сайта</button>
+              <button type="submit" class="btn  btn--large-form  btn--submit-form">Проверяем позиции сайта</button>
             </div>
           </div>
 
@@ -202,6 +202,6 @@
   <footer class="page-footer">
     <p class="page-footer__text" style="color: white; text-align: center; font-size: 24px; font-weight: bold;">Lorem ipsum dolor.</p>
   </footer>
-  <script src="js/script.js" charset="utf-8"></script>
+  <script src="js/main.js" charset="utf-8"></script>
 </body>
 </html>

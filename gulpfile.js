@@ -122,10 +122,15 @@ gulp.task('clean', function () {
 gulp.task('js', function () {
   return gulp.src([
       // список обрабатываемых файлов в нужной последовательности
-      dirs.source + '/js/script.js',
+      dirs.source + '/js/form.js',
+      dirs.source + '/js/validate.js',
+      dirs.source + '/js/kkk.js'
     ])
     .pipe(plumber({ errorHandler: onError }))
-    .pipe(concat('script.js'))
+    .pipe(concat('main.js'))
+    .pipe(gulp.dest(dirs.build + '/js/'))
+    .pipe(browserSync.stream())
+    .pipe(rename('main.min.js'))
     .pipe(uglify())
     .pipe(gulp.dest(dirs.build + '/js'));
 });
