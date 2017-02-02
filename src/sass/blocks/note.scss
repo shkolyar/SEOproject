@@ -11,3 +11,9 @@
 .note__star {
   color: $second-color;
 }
+
+.note--words-count span,
+.note--left-words-count span {
+  color: $second-color;
+  font-weight: $bold;
+}
