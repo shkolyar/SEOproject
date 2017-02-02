@@ -43,7 +43,7 @@
               <h1 class="promo__title">Lorem ipsum dolor sit amet, consectetur adipisicing.</h1>
               <p class="promo__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro in debitis illo voluptatem commodi facilis temporibus sed repellendus ullam? Necessitatibus molestiae unde ab, ipsam eligendi facilis sequi distinctio corporis architecto.</p>
               <div class="promo__btn-wrap">
-                <a href="#form" class="btn">Попробовать прямо сейчас!</a>
+                <a href="#form" class="btn  btn--scroll">Попробовать прямо сейчас!</a>
               </div>
             </div>
           </div>
@@ -126,19 +126,25 @@
                 <div class="field-text  field-text--keyword">
                   <label class="field-text__name  visually-hidden" for="text-field-1">Ключевое слово</label>
                   <div class="field-text__input-wrap">
-                    <input class="field-text__input  field-text__input--required" name="keyword" id="text-field-keyword" type="text" placeholder="Ключевое слово" pattern="^[A-Za-zА-Яа-яЁё\s]+$">
+                    <input class="field-text__input  field-text__input--required" name="keyword" id="text-field-keyword" type="text" placeholder="Ключевое слово" pattern="^[A-Za-zА-Яа-яЁё\s]+$" data-word-count="10">
                   </div>
                 </div>
-                <button type="button" class="btn  btn--large-pink  btn--new-keyword">Еще ключевое слово</button>
+                <div class="form__note-wrapper">
+                   <p class="note"><span class="note__star">*</span> &mdash; Вводите по одному ключевому слову или фразе</p>
+                </div>
+                <div class="form__button-wrap">
+                  <button type="button" class="btn  btn--large-pink  btn--new-keyword">Еще ключевое слово</button>
+                  <button type="button" class="btn  btn--large-pink  btn--delete-keyword">Удалить ключевое слово</button>
+                </div>
               </div>
             </div>
 
             <div class="form__step  form__step--white-bg  form__step--copypaste-enter-keys"  id="step-enter-2">
               <div class="form__step-inner  form__step-inner--small-width">
                 <h3 class="form__step-title">Введите ключевые слова</h3>
-                <textarea class="field-text__textarea  field-text__input--required" name="keywords" id="textarea-keywords" cols="30" rows="10" placeholder="Каждое ключевое слово или фразу вводите через запятую или с новой строки*" pattern="^[A-Za-zА-Яа-яЁё\s]+$"  required></textarea>
+                <textarea class="field-text__textarea  field-text__input  field-text__input--required" name="keywords" id="textarea-keywords" cols="30" rows="10" placeholder="Каждое ключевое слово или фразу вводите с новой строки*" data-word-count="10" pattern="^[A-Za-zА-Яа-яЁё\s]+$"  required></textarea>
                 <div class="form__note-wrapper">
-                  <p class="note"><span class="note__star">*</span> &mdash; Обратите внимание на разделители ключевых запросов (запятая или новая строка)</p>
+                  <p class="note"><span class="note__star">*</span> &mdash; Обратите внимание на разделитель ключевых запросов (новая строка)</p>
                 </div>
               </div>
             </div>
