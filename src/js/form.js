@@ -17,6 +17,7 @@ textarea.addEventListener('input', calcEnterWords);
 // textarea.addEventListener('focus', showWordsCount);
 
 document.addEventListener('DOMContentLoaded', showInputMessage);
+// document.addEventListener('DOMContentLoaded', styleSelectOption);
 
 var btnNewKeyword = document.querySelector('.btn--new-keyword');
 var btnDeleteKeyword = document.querySelector('.btn--delete-keyword');
@@ -154,26 +155,40 @@ function scrollToForm(event) {
   var formCordinate = form.getBoundingClientRect();
   var formTop = formCordinate.top;
   var windowYOffset = window.pageYOffset;
-  var interval = 10;
+  var interval = 16;
   var time = 1000;
-  var onePart = time / interval;
+  time = time - ( time % interval );
+  var count = time / interval;
   var step = 0;
-  var intervalSum = 0;
+  var i = 1;
 
+  console.time('time')
   var scrollInterval = setInterval(function() {
-    step = step + (1 / onePart);
-    intervalSum = Math.floor(step * time);
-    if ( intervalSum <= time ) {
-      windowYOffset =  formTop * quad(step);
+    if ( i <= count ) {
+      step = i / count;
+      windowYOffset =  formTop * circ(step);
       window.scrollTo(0, windowYOffset);
     }
-    else clearInterval(scrollInterval);
+    else {
+      clearInterval(scrollInterval);
+    }
+    i++;
+    if ( i > count ) console.timeEnd('time')
   }, interval);
 }
 
-function quad(progress) {
-  return Math.pow(progress, 2)
+function circ(timeFraction) {
+  return 1 - Math.sin(Math.acos(timeFraction))
 }
+
+
+// function styleSelectOption() {
+//   var select = document.querySelector('.field-select__select');
+//   var options = select.options;
+//   for (var i = 0; i < options.length; i++ ) {
+//     options[i].setAttribute('style','margin: 20px');
+//   }
+// }
 
 // function showLeftWords(number) {
 //   var textareaData = textarea.dataset;
@@ -209,44 +224,5 @@ function quad(progress) {
 //     newText.innerHTML = 'У вас осталось <span>' + countWords + '</span> ключевых слов';
 //     textBlock.insertBefore(newText, textBlock.children[0]);
 //   }
-// }
-
-// function scrollToForm() {
-//   var form = document.getElementById('form')
-//   var formCordinate = form.getBoundingClientRect();
-//   var formTop = formCordinate.top;
-//   var start = Date.now();
-//   var timer = setInterval(function() {
-//   var timerPassed = Date.now() - start;
-//   if (timerPassed >= 1000  && formTop == 0) {
-//     clearInterval(timer);
-//     return;
-//   }
-
-//   draw(timerPassed, formTop);
-//   }, 20);
-
-//   function draw(time, coordinate) {
-//     console.log(coordinate);
-//     coordinate = coordinate - time / 50;
-//     console.log(coordinate);
-//   }
-// }
-
-// function scrollToForm() {
-//   var form = document.getElementById('form')
-//   var formCordinate = form.getBoundingClientRect();
-//   var formTop = formCordinate.top;
-//   var newTop = 0;
-
-//   function scroll() {
-//     formTop  = Math.floor(formTop - 200);
-
-//     if ( formTop == newTop ) {
-//       clearInterval(id);
-//     }
-//   }
-
-//   var id = setInterval(scroll, 10);
 // }
 

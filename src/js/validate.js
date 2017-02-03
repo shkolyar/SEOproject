@@ -14,14 +14,22 @@ var blockSearchSystem = document.querySelector('.form__step-inner--seach-system'
 function submitForm(event) {
   if ( !validCheckbox() ) {
     event.preventDefault();
-    var errorMessage = document.createElement('span');
-    errorMessage.className = 'form__step-error';
-    errorMessage.innerHTML = 'Выберите минимум одну поисковую систему';
-    blockSearchSystem.appendChild(errorMessage);
+    showCheckboxError();
     return false;
-    console.log('checkbox valid');
   } else {
     console.log('checkbox valid');
+    form.submit();
+  }
+}
+
+function showCheckboxError() {
+  var message = blockSearchSystem.querySelector('.note--error');
+  if ( !message ) {
+    var errorMessage = document.createElement('p');
+    errorMessage.className = 'note  note--error';
+    errorMessage.innerHTML = 'Выберите минимум одну поисковую систему';
+    blockSearchSystem.appendChild(errorMessage);
+    console.log('checkbox invalid');
   }
 }
 
