@@ -8,6 +8,7 @@ var blockEnterCopypaste = document.getElementById('step-enter-2');
 
 var inputUrl = document.getElementById('text-field-url');
 inputUrl.required = true;
+inputUrl.addEventListener('focus', showPlaceholder);
 
 var inputForOneKeyword = document.getElementById('text-field-keyword');
 var inputForKeywords = document.getElementById('textarea-keywords');
@@ -24,6 +25,7 @@ var btnDeleteKeyword = document.querySelector('.btn--delete-keyword');
 
 var btnScroll = document.querySelector('.btn--scroll');
 btnScroll.addEventListener('click', scrollToForm);
+
 
 btnNewKeyword.addEventListener('click', showInput);
 btnDeleteKeyword.addEventListener('click', deleteInput);
@@ -162,7 +164,6 @@ function scrollToForm(event) {
   var step = 0;
   var i = 1;
 
-  console.time('time')
   var scrollInterval = setInterval(function() {
     if ( i <= count ) {
       step = i / count;
@@ -173,12 +174,16 @@ function scrollToForm(event) {
       clearInterval(scrollInterval);
     }
     i++;
-    if ( i > count ) console.timeEnd('time')
   }, interval);
 }
 
 function circ(timeFraction) {
   return 1 - Math.sin(Math.acos(timeFraction))
+}
+
+function showPlaceholder() {
+  var inputUrl = document.getElementById('text-field-url');
+  inputUrl.value = inputUrl.placeholder;
 }
 
 
@@ -225,4 +230,17 @@ function circ(timeFraction) {
 //     textBlock.insertBefore(newText, textBlock.children[0]);
 //   }
 // }
+
+//PARSE URL
+//Парсинг урла
+// var parser = document.createElement('a');
+// parser.href = "http://example.com:3000/pathname/?search=test#hash";
+
+// parser.protocol; // => "http:"
+// parser.hostname; // => "example.com"
+// parser.port;     // => "3000"
+// parser.pathname; // => "/pathname/"
+// parser.search;   // => "?search=test"
+// parser.hash;     // => "#hash"
+// parser.host;     // => "example.com:3000"
 
