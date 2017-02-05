@@ -2,9 +2,9 @@
 <html lang="ru">
 <head>
     <meta charset="utf-8">
-    <title>SeoFocus: снятие позиций вашего сайта</title>
+    <title><%- projectName %>: снятие позиций вашего сайта</title>
     <meta content='width=device-width, initial-scale=1.0' name='viewport'>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="stylesheets/style.css">
 </head>
 
 <body>
@@ -19,23 +19,7 @@
   <header class="page-header  page-header--main">
     <h1 class="hidden">SeoFocus</h1>
     <div class="page-header__inner">
-      <div id="main-menu-wrapper" class="page-header__top-line">
-        <div class="page-header__top-line-inner">
-          <a href="" class="main-logo">
-            <picture>
-              <source
-                srcset="img/logo-desktop@2x.png 2x, img/logo-desktop@1x.png 1x"
-                media="(min-width: 960px)">
-              <source
-                srcset="img/logo-tablet@2x.png 2x, img/logo-tablet@1x.png 1x"
-                media="(min-width: 660px)">
-              <img src="img/logo-mobile@1x.png"
-                  srcset="img/logo-mobile@2x.png 2x, img/logo-mobile@1x.png 1x"
-                  alt="SeoFocus" class="main-logo__img" width="210" height="37">
-              </picture>
-          </a>
-        </div>
-      </div>
+      <%- include  ./header %>
       <div class="promo  promo--main">
         <div class="promo__inner">
           <div class="promo__content">
@@ -76,7 +60,7 @@
       </div>
     </section>
 
-    <form action="" class="form  form--grey-bg" id="form">
+    <form action="/position" method="post" class="form  form--grey-bg" id="form">
       <div class="form__inner">
         <div class="form__container  form__container--flex">
           <div class="form__step  form__step--promo  form__step--order-0">
@@ -208,6 +192,6 @@
   <footer class="page-footer">
     <p class="page-footer__text" style="color: white; text-align: center; font-size: 24px; font-weight: bold;">Lorem ipsum dolor.</p>
   </footer>
-  <script src="js/main.js" charset="utf-8"></script>
+  <script src="javascripts/main.js" charset="utf-8"></script>
 </body>
 </html>

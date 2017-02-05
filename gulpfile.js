@@ -7,6 +7,7 @@ const dirs = pjson.config.directories;
 
 // Определим необходимые инструменты
 const gulp = require('gulp');
+const nodemon = require('nodemon');
 const sass = require("gulp-sass");
 const rename = require('gulp-rename');
 const sourcemaps = require('gulp-sourcemaps');
@@ -40,19 +41,19 @@ gulp.task('sass', function(){
         mqpacker({ sort: true }),                           // объединение медиавыражений
     ]))
     .pipe(sourcemaps.write('/'))                            // записываем карту кода как отдельный файл (путь из константы)
-    .pipe(gulp.dest(dirs.build + '/css/'))                  // записываем CSS-файл (путь из константы)
+    .pipe(gulp.dest(dirs.build + '/stylesheets/'))                  // записываем CSS-файл (путь из константы)
     .pipe(browserSync.stream())
     .pipe(rename('style.min.css'))                          // переименовываем
     .pipe(cleanCSS())                                       // сжимаем
-    .pipe(gulp.dest(dirs.build + '/css/'));                 // записываем CSS-файл (путь из константы)
+    .pipe(gulp.dest(dirs.build + '/stylesheets/'));                 // записываем CSS-файл (путь из константы)
 });
 
 // ЗАДАЧА: Сборка HTML
-gulp.task('html', function() {
-  return gulp.src(dirs.source + '/*.html')                  // какие файлы обрабатывать (путь из константы, маска имени)
+gulp.task('ejs', function() {
+  return gulp.src(dirs.source + '/*.ejs')                  // какие файлы обрабатывать (путь из константы, маска имени)
     .pipe(plumber({ errorHandler: onError }))
     .pipe(replace(/\n\s*<!--DEV[\s\S]+?-->/gm, ''))         // убираем комментарии <!--DEV ... -->
-    .pipe(gulp.dest(dirs.build));                           // записываем файлы (путь из константы)
+    .pipe(gulp.dest(dirs.ejs));                           // записываем файлы (путь из константы)
 });
 
 // ЗАДАЧА: Копирование изображений
@@ -63,8 +64,8 @@ gulp.task('img', function () {
       {since: gulp.lastRun('img')}                          // оставим в потоке обработки только изменившиеся от последнего запуска задачи (в этой сессии) файлы
     )
     .pipe(plumber({ errorHandler: onError }))
-    .pipe(newer(dirs.build + '/img'))                       // оставить в потоке только новые файлы (сравниваем с содержимым папки билда)
-    .pipe(gulp.dest(dirs.build + '/img'));                  // записываем файлы (путь из константы)
+    .pipe(newer(dirs.build + '/images'))                       // оставить в потоке только новые файлы (сравниваем с содержимым папки билда)
+    .pipe(gulp.dest(dirs.build + '/images'));                  // записываем файлы (путь из константы)
 });
 
 // ЗАДАЧА: Оптимизация изображений (ЗАДАЧА ЗАПУСКАЕТСЯ ТОЛЬКО ВРУЧНУЮ)
@@ -124,15 +125,15 @@ gulp.task('js', function () {
       // список обрабатываемых файлов в нужной последовательности
       dirs.source + '/js/form.js',
       dirs.source + '/js/validate.js',
-      dirs.source + '/js/kkk.js'
+      dirs.source + '/js/request.js'
     ])
     .pipe(plumber({ errorHandler: onError }))
     .pipe(concat('main.js'))
-    .pipe(gulp.dest(dirs.build + '/js/'))
+    .pipe(gulp.dest(dirs.build + '/javascripts/'))
     .pipe(browserSync.stream())
     .pipe(rename('main.min.js'))
     .pipe(uglify())
-    .pipe(gulp.dest(dirs.build + '/js'));
+    .pipe(gulp.dest(dirs.build + '/javascripts'));
 });
 
 // ЗАДАЧА: Перемещение шрифтов
@@ -142,46 +143,48 @@ gulp.task('copy', function() {
     ], {
       base: '.'
     })
-    .pipe(gulp.dest('build'));
+    .pipe(gulp.dest('public'));
 });
 
 // ЗАДАЧА: Сборка всего
 gulp.task('build', gulp.series(                             // последовательно:
   'clean',                                                  // последовательно: очистку папки сборки
   'svgstore',
-  gulp.parallel('sass', 'img', 'js', 'copy'),
-  'html'                                                    // последовательно: сборку разметки
+  gulp.parallel('sass', 'img', 'js', 'copy')                                                    // последовательно: сборку разметки
 ));
 
-// ЗАДАЧА: Локальный сервер, слежение
-gulp.task('serve', gulp.series('build', function() {
+gulp.task('nodemon', function (callback) {
 
-  browserSync.init({                                        // запускаем локальный сервер (показ, автообновление, синхронизацию)
-    //server: dirs.build,                                     // папка, которая будет «корнем» сервера (путь из константы)
-    server: {
-      baseDir: './build/'
-    },
-    port: 3000,                                             // порт, на котором будет работать сервер
-    startPath: 'index.html',                                // файл, который буде открываться в браузере при старте сервера
-    // open: false                                          // возможно, каждый раз стартовать сервер не нужно...
+  var started = false;
+
+  return nodemon({
+    script: 'server.js'
+  }).on('start', function () {
+    if (!started) {
+      callback();
+      started = true;
+    }
   });
+});
 
-  gulp.watch(                                               // следим за HTML
-    [
-      dirs.source + '/*.html',                              // в папке с исходниками
-    ],
-    gulp.series('html', reloader)                           // при изменении файлов запускаем пересборку HTML и обновление в браузере
-  );
+// ЗАДАЧА: Локальный сервер, слежение
+gulp.task('serve', gulp.series('nodemon', 'build', function() {
+
+  browserSync.init(null, {
+    proxy: "http://localhost:3003",
+        files: ["public/**/*.*"],
+        port: 3000,
+  });
 
   gulp.watch(                                               // следим
     dirs.source + '/sass/**/*.scss',
     gulp.series('sass')                                     // при изменении запускаем компиляцию (обновление браузера — в задаче компиляции)
   );
 
-  gulp.watch(                                               // следим за SVG
-    dirs.source + '/img/svg-sprite/*.svg',
-    gulp.series('svgstore', 'html', reloader)
-  );
+  // gulp.watch(                                               // следим за SVG
+  //   dirs.source + '/img/svg-sprite/*.svg',
+  //   gulp.series('svgstore', 'html', reloader)
+  // );
 
   gulp.watch(                                               // следим за изображениями
     dirs.source + '/img/*.{gif,png,jpg,jpeg,svg}',
