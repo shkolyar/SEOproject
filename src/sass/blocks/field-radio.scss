@@ -44,9 +44,9 @@
 //   border-color: $font-color-main;
 // }
 
-// .field-radio__input:active + .field-radio__name-text:before {
-//   border-color: $main-color;
-// }
+.field-radio__input:focus + .field-radio__name-text:before {
+  border-color: $main-color;
+}
 
 .field-radio__input:checked + .field-radio__name-text:after {
   width: 15px;

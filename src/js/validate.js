@@ -23,7 +23,8 @@ function submitForm(event) {
     return false;
   }
 
-  return true;
+  sentPostRequestForm();
+  // return true;
 }
 
 function showCheckboxError() {
@@ -60,7 +61,6 @@ function validUrl() {
   var domen = window.location.host;
   var linkHref = link.getAttribute('href');
   var symbolsIndex = link.protocol.length + 2;
-  console.log(link.href, link.protocol);
 
   if ( domen === link.host ) {
     console.log('it\'s not ok');

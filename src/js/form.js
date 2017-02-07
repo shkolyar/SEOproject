@@ -18,13 +18,18 @@ textarea.addEventListener('input', calcEnterWords);
 // textarea.addEventListener('focus', showWordsCount);
 
 document.addEventListener('DOMContentLoaded', showInputMessage);
-// document.addEventListener('DOMContentLoaded', styleSelectOption);
+
+var selectRegion = document.querySelector('.field-select__select--region');
+document.addEventListener('DOMContentLoaded', disabledOtherOptions);
 
 var btnNewKeyword = document.querySelector('.btn--new-keyword');
 var btnDeleteKeyword = document.querySelector('.btn--delete-keyword');
 
 var btnScroll = document.querySelector('.btn--scroll');
 btnScroll.addEventListener('click', scrollToForm);
+
+var selectCountry = document.querySelector('.field-select__select--country');
+selectCountry.addEventListener('change', setDisabledOtherOptgroup);
 
 
 btnNewKeyword.addEventListener('click', showInput);
@@ -186,14 +191,45 @@ function showPlaceholder() {
   inputUrl.value = inputUrl.placeholder;
 }
 
+function disabledOtherOptions() {
+  var selectRegion = document.querySelector('.field-select__select--region');
+  var regionOptgroup = selectRegion.getElementsByTagName('optgroup');
 
-// function styleSelectOption() {
-//   var select = document.querySelector('.field-select__select');
-//   var options = select.options;
-//   for (var i = 0; i < options.length; i++ ) {
-//     options[i].setAttribute('style','margin: 20px');
-//   }
-// }
+  var selectCountry = document.querySelector('.field-select__select--country');
+  var selectedIndexCountry = selectCountry.selectedIndex;
+  var optionsCountry = selectCountry.options;
+  var selectedOptionCountry = optionsCountry[selectedIndexCountry];
+  var selectedCountryName = selectedOptionCountry.text;
+
+  for (var i = 0; i < regionOptgroup.length; i++) {
+    if ( selectedCountryName !== regionOptgroup[i].label ) {
+      regionOptgroup[i].setAttribute('disabled', 'disabled');
+    }
+  }
+}
+
+function setDisabledOtherOptgroup() {
+  var selectCountry = document.querySelector('.field-select__select--country');
+  var selectedIndexCountry = selectCountry.selectedIndex;
+  var optionsCountry = selectCountry.options;
+  var selectedOptionCountry = optionsCountry[selectedIndexCountry];
+  var selectedCountryName = selectedOptionCountry.text;
+
+  var selectRegion = document.querySelector('.field-select__select--region');
+  var regionOptgroup = selectRegion.getElementsByTagName('optgroup');
+
+  for (var i = 0; i < regionOptgroup.length; i++) {
+    if ( selectedCountryName !== regionOptgroup[i].label ) {
+      regionOptgroup[i].setAttribute('disabled', 'disabled');
+    }
+    if ( selectedCountryName === regionOptgroup[i].label ) {
+      regionOptgroup[i].removeAttribute('disabled', 'disabled');
+    }
+  }
+}
+
+
+
 
 // function showLeftWords(number) {
 //   var textareaData = textarea.dataset;

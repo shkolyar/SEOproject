@@ -51,9 +51,9 @@
 //   border-color: $font-color-main;
 // }
 
-// .field-checkbox__input:active + .field-checkbox__name-text:before {
-//   border-color: $main-color;
-// }
+.field-checkbox__input:focus + .field-checkbox__name-text:before {
+  border-color: $main-color;
+}
 
 .field-checkbox__input:checked + .field-checkbox__name-text:after {
   width: 25px;

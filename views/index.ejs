@@ -16,7 +16,7 @@
   </svg>
 
 
-  <header class="page-header  page-header--main">
+  <header class="page-header  page-header--main" itemscope itemtype="http://schema.org/ Service">
     <h1 class="hidden">SeoFocus</h1>
     <div class="page-header__inner">
       <%- include  ./header %>
@@ -25,9 +25,9 @@
           <div class="promo__content">
             <div class="promo__content-inner">
               <h1 class="promo__title">Lorem ipsum dolor sit amet, consectetur adipisicing.</h1>
-              <p class="promo__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro in debitis illo voluptatem commodi facilis temporibus sed repellendus ullam? Necessitatibus molestiae unde ab, ipsam eligendi facilis sequi distinctio corporis architecto.</p>
+              <p class="promo__text" itemprop="serviceType">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro in debitis illo voluptatem commodi facilis temporibus sed repellendus ullam? Necessitatibus molestiae unde ab, ipsam eligendi facilis sequi distinctio corporis architecto.</p>
               <div class="promo__btn-wrap">
-                <a href="#form" class="btn  btn--scroll">Попробовать прямо сейчас!</a>
+                <a href="#form" class="btn  btn--scroll" role="button" aria-pressed="false">Попробовать прямо сейчас!</a>
               </div>
             </div>
           </div>
@@ -110,7 +110,7 @@
                 <div class="field-text  field-text--keyword">
                   <label class="field-text__name  visually-hidden" for="text-field-1">Ключевое слово</label>
                   <div class="field-text__input-wrap">
-                    <input class="field-text__input  field-text__input--required" name="keyword" id="text-field-keyword" type="text" placeholder="Ключевое слово" pattern="^[A-Za-zА-Яа-яЁё\s]+$" data-word-count="10">
+                    <input class="field-text__input  field-text__input--required" name="keywords" id="text-field-keyword" type="text" placeholder="Ключевое слово" pattern="^[A-Za-zА-Яа-яЁё\s]+$" data-word-count="10" disabled="disabled">
                   </div>
                 </div>
                 <div class="form__note-wrapper">
@@ -142,14 +142,14 @@
               <ul class="form__search-list">
                 <li class="field-checkbox">
                   <label class="field-checkbox__name">
-                    <input type="checkbox" class="field-checkbox__input" checked>
-                    <span class="field-checkbox__name-text"><svg width="35" height="35"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-yandex"></use></svg><span>&ensp;(Яндекс)</span></span>
+                    <input type="checkbox" class="field-checkbox__input" name="search-system" value="yandex" checked>
+                    <span class="field-checkbox__name-text"><svg width="35" height="35"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-yandex"></use></svg>&ensp;(Яндекс)</span>
                   </label>
                 </li>
                 <li class="field-checkbox">
                   <label class="field-checkbox__name">
-                    <input type="checkbox" class="field-checkbox__input" checked>
-                    <span class="field-checkbox__name-text"><svg width="35" height="35"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-google"></use></svg><span>&ensp;(Google)</span></span>
+                    <input type="checkbox" class="field-checkbox__input" name="search-system" value="google" checked>
+                    <span class="field-checkbox__name-text"><svg width="35" height="35"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-google"></use></svg>&ensp;(Google)</span>
                   </label>
                 </li>
               </ul>
@@ -163,19 +163,49 @@
                   Страна
                 </div>
                 <div class="field-select__select-wrap">
-                  <select class="field-select__select">
-                    <option value="0" selected="selected">Россия</option>
-                    <option value="1">Украина</option>
-                    <option value="2">Белоруссия</option>
+                  <select class="field-select__select  field-select__select--country" name="country">
+                    <option value="225" selected="selected">Россия</option>
+                    <option value="187">Украина</option>
+                    <option value="149">Белоруссия</option>
                   </select>
                 </div>
               </label>
-              <div class="field-text">
+              <label class="field-select">
+                <div class="field-select__name">
+                  Регион поиска
+                </div>
+                <div class="field-select__select-wrap">
+                  <select class="field-select__select  field-select__select--region" name="region">
+                    <option value="" selected></option>
+                    <optgroup label="Россия">
+                      <option value="213">Москва</option>
+                      <option value="2">Санкт-Петербург</option>
+                      <option value="65">Новосибирск</option>
+                      <option value="54">Екатеринбург</option>
+                      <option value="47">Нижний Новгород</option>
+                      <option value="43">Казань</option>
+                      <option value="1">Москва и область</option>
+                      <option value="10174">Санкт-Петербург и ЛО</option>
+                    </optgroup>
+                    <optgroup label="Украина">
+                      <option value="143">Киев</option>
+                      <option value="147">Харьков</option>
+                      <option value="145">Одесса</option>
+                    </optgroup>
+                    <optgroup label="Белоруссия">
+                      <option value="157">Минск</option>
+                      <option value="153">Брест</option>
+                      <option value="10274">Гродно</option>
+                    </optgroup>
+                  </select>
+                </div>
+              </label>
+              <!-- <div class="field-text">
                 <label class="field-text__name" for="text-field-1">Регион поиска</label>
                 <div class="field-text__input-wrap">
                   <input class="field-text__input" id="text-field-region" type="text" placeholder="Введите регион" name="region">
                 </div>
-              </div>
+              </div> -->
             </div>
           </div>
 
